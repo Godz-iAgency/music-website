@@ -79,45 +79,61 @@ export function WhoWeHelp() {
                 >
                   {/* Front Side */}
                   <div
-                    className="absolute inset-0 w-full h-full rounded-2xl bg-surface-2 border border-white/[0.04] p-8 flex flex-col justify-between hover:border-accent/20 transition-all duration-300"
+                    className="absolute inset-0 w-full h-full rounded-2xl bg-surface-2 border border-white/[0.04] flex flex-col overflow-hidden hover:border-accent/20 transition-all duration-300"
                     style={{
                       backfaceVisibility: "hidden",
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    <div>
-                      <h3 className="text-2xl font-bold tracking-tight text-white mb-6">{title}</h3>
-                      <p className="text-sm text-zinc-400 leading-relaxed font-medium">{pain}</p>
+                    {/* Image — top */}
+                    <div className="relative w-full h-[150px] shrink-0">
+                      <Image
+                        src={photo}
+                        alt={title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 20vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-surface-2 via-surface-2/30 to-transparent" />
                     </div>
-                    <p className="text-xs text-accent font-semibold tracking-wider uppercase">Click to see more &rarr;</p>
+                    {/* Copy — bottom */}
+                    <div className="flex flex-1 flex-col justify-between p-6">
+                      <div>
+                        <h3 className="text-xl font-bold tracking-tight text-white mb-3">{title}</h3>
+                        <p className="text-sm text-zinc-400 leading-relaxed font-medium">{pain}</p>
+                      </div>
+                      <p className="text-xs text-accent font-semibold tracking-wider uppercase">Click to see more &rarr;</p>
+                    </div>
                   </div>
 
                   {/* Back Side */}
                   <div
-                    className="absolute inset-0 w-full h-full rounded-2xl bg-surface-3 border border-accent/25 p-8 flex flex-col justify-between overflow-hidden"
+                    className="absolute inset-0 w-full h-full rounded-2xl bg-surface-3 border border-accent/25 flex flex-col overflow-hidden"
                     style={{
                       transform: "rotateY(180deg)",
                       backfaceVisibility: "hidden",
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    {/* Background Image with Overlay */}
-                    <div className="absolute inset-0 z-0">
+                    {/* Image — top */}
+                    <div className="relative w-full h-[150px] shrink-0">
                       <Image
                         src={photo}
                         alt={title}
                         fill
-                        className="object-cover opacity-15 filter grayscale"
-                        sizes="(max-w-768px) 100vw, 20vw"
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 20vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-b from-[#08080d]/80 via-[#0c0c12]/95 to-[#101018]" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-surface-3 via-surface-3/30 to-transparent" />
                     </div>
-
-                    <div className="relative z-10">
-                      <h3 className="text-xl font-bold tracking-tight text-accent mb-4">{title}</h3>
-                      <p className="text-sm text-zinc-200 leading-relaxed font-medium">{build}</p>
+                    {/* Copy — bottom */}
+                    <div className="flex flex-1 flex-col justify-between p-6">
+                      <div>
+                        <h3 className="text-xl font-bold tracking-tight text-accent mb-3">{title}</h3>
+                        <p className="text-sm text-zinc-200 leading-relaxed font-medium">{build}</p>
+                      </div>
+                      <p className="text-[11px] text-zinc-500 font-medium tracking-wide uppercase">Click to flip back</p>
                     </div>
-                    <p className="relative z-10 text-[11px] text-zinc-500 font-medium tracking-wide uppercase">Click to flip back</p>
                   </div>
                 </div>
               </StaggerItem>

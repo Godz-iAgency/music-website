@@ -21,7 +21,7 @@ const TESTIMONIALS = [
     author: "Andrew Knor",
     title: "Talent Buyer",
     company: "The Empire",
-    url: "#",
+    url: "https://www.itzdjak.com/",
     photo: "/andrew_knor.jpg.png",
     isSocial: false,
   },
@@ -66,8 +66,11 @@ export function Testimonials() {
         >
           {TESTIMONIALS.map((testimonial, i) => (
             <StaggerItem key={i}>
-              <motion.div
-                className="group relative h-full rounded-2xl bg-surface-3 border border-white/[0.04] p-8 md:p-10 overflow-hidden hover:border-accent/15 transition-all duration-500 flex flex-col justify-between"
+              <motion.a
+                href={testimonial.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative h-full rounded-2xl bg-surface-3 border border-white/[0.04] p-8 md:p-10 overflow-hidden hover:border-accent/15 transition-all duration-500 flex flex-col justify-between cursor-pointer"
                 whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
               >
@@ -93,14 +96,9 @@ export function Testimonials() {
                       </p>
                     </div>
                     <div className="pt-6 w-full border-t border-white/[0.06] mt-8">
-                      <a
-                        href={testimonial.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-semibold text-accent hover:text-accent-light transition-colors"
-                      >
+                      <span className="text-xs font-semibold text-accent group-hover:text-accent-light transition-colors">
                         splitmic.com &rarr;
-                      </a>
+                      </span>
                     </div>
                   </div>
                 ) : (
@@ -142,7 +140,7 @@ export function Testimonials() {
                     </div>
                   </>
                 )}
-              </motion.div>
+              </motion.a>
             </StaggerItem>
           ))}
         </StaggerContainer>

@@ -1,30 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Search, MessageSquare, Hammer, TrendingUp } from "lucide-react";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/reveal";
 
 const STEPS = [
   {
     num: "01",
     title: "Audit.",
+    icon: Search,
     description:
       "We map your workflows and find where automation wins.",
   },
   {
     num: "02",
     title: "Consult.",
+    icon: MessageSquare,
     description:
       "We prioritize the highest-impact builds for your operation.",
   },
   {
     num: "03",
     title: "Build.",
+    icon: Hammer,
     description:
       "We deliver your AI system inside your existing tools.",
   },
   {
     num: "04",
     title: "Optimize.",
+    icon: TrendingUp,
     description:
       "We improve performance after launch.",
   },
@@ -57,7 +62,7 @@ export function Process() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-5">
-            {STEPS.map(({ num, title, description }) => (
+            {STEPS.map(({ num, title, description, icon: Icon }) => (
               <StaggerItem key={num}>
                 <motion.div
                   className="group relative rounded-2xl bg-surface-2 border border-white/[0.04] p-9 md:p-10 hover:border-accent/15 transition-all duration-500 overflow-hidden h-full"
@@ -72,9 +77,9 @@ export function Process() {
                     {num}
                   </span>
 
-                  {/* Step number badge */}
-                  <div className="relative z-10 w-14 h-14 rounded-xl bg-accent/8 border border-accent/12 flex items-center justify-center text-accent font-bold text-sm mb-7 group-hover:bg-accent/12 group-hover:border-accent/20 transition-all duration-300">
-                    {num}
+                  {/* Step icon badge */}
+                  <div className="relative z-10 w-14 h-14 rounded-xl bg-accent/8 border border-accent/12 flex items-center justify-center text-accent mb-7 group-hover:bg-accent/12 group-hover:border-accent/20 group-hover:scale-[1.05] transition-all duration-300">
+                    <Icon className="w-6 h-6" strokeWidth={2} />
                   </div>
 
                   <h3 className="relative z-10 text-lg font-bold tracking-tight text-white uppercase mb-4">

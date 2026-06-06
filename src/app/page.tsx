@@ -7,6 +7,7 @@ import { Testimonials } from "@/components/testimonials";
 import { About } from "@/components/about";
 import { FinalCTA } from "@/components/final-cta";
 import { SplitMicBanner } from "@/components/splitmic-banner";
+import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <About />
         <FinalCTA />
         <SplitMicBanner />
+        <Contact />
       </main>
       <Footer />
     </>

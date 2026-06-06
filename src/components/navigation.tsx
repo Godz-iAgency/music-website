@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Mail } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "Home", href: "#hero" },
@@ -56,21 +56,30 @@ export function Navigation() {
         </a>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-3">
           {NAV_LINKS.map(({ label, href }) => (
             <a
               key={label}
               href={href}
-              className="relative px-4 py-2 text-[13px] font-medium tracking-wide text-zinc-300 hover:text-white transition-colors duration-300 group"
+              className="relative px-4 py-2 text-[13px] font-medium tracking-wide text-zinc-300 rounded-lg hover:text-white hover:bg-white/[0.05] transition-all duration-300 group whitespace-nowrap"
             >
               {label}
-              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-accent rounded-full group-hover:w-5 transition-all duration-300" />
+              <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-accent rounded-full group-hover:w-5 transition-all duration-300" />
             </a>
           ))}
         </nav>
 
         {/* Right Side */}
         <div className="flex items-center gap-3">
+          {/* Message / Contact */}
+          <a
+            href="#contact"
+            className="flex items-center justify-center w-9 h-9 rounded-full border border-white/[0.06] hover:border-accent/40 hover:bg-accent/10 transition-all duration-300 group"
+            aria-label="Send us a message"
+          >
+            <Mail className="w-3.5 h-3.5 text-zinc-400 group-hover:text-white transition-colors" strokeWidth={2.2} />
+          </a>
+
           {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/christopher-downer/"
