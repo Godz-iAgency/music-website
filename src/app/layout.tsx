@@ -26,17 +26,11 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://godz-i.com",
   },
-  icons: {
-    icon: [{ url: "/godzi_icon.png", type: "image/png" }],
-    apple: [{ url: "/godzi_icon.png", type: "image/png" }],
-    shortcut: [{ url: "/godzi_icon.png", type: "image/png" }],
-  },
   appleWebApp: {
     capable: true,
     title: "GODZ-i",
     statusBarStyle: "black-translucent",
   },
-  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
