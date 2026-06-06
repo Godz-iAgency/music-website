@@ -27,7 +27,9 @@ export const metadata: Metadata = {
     url: "https://godz-i.com",
   },
   icons: {
-    icon: "/godzi_icon.png",
+    icon: [{ url: "/godzi_icon.png", type: "image/png" }],
+    apple: [{ url: "/godzi_icon.png", type: "image/png" }],
+    shortcut: [{ url: "/godzi_icon.png", type: "image/png" }],
   },
   appleWebApp: {
     capable: true,
