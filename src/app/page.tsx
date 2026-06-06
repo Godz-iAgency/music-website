@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <main>
+      <main className="pt-[80px]">
         <Hero />
         <WhoWeHelp />
         <Process />

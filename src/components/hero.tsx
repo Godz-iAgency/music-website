@@ -23,7 +23,7 @@ export function Hero() {
         }}
       />
 
-      <div className="max-w-7xl w-full mx-auto px-6 md:px-10 pt-[120px] pb-14 md:pt-[140px] md:pb-16 lg:pt-[160px] lg:pb-20">
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-10 pt-16 pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left: Content */}
           <div className="relative z-10">
