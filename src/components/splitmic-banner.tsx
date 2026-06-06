@@ -12,7 +12,13 @@ export function SplitMicBanner() {
 
       <div className="max-w-7xl w-full mx-auto px-6 md:px-10 text-center relative z-10 flex flex-col items-center">
         <Reveal>
-          <div className="relative w-16 h-16 mb-6 rounded-2xl overflow-hidden border border-white/[0.06] bg-surface-2 flex items-center justify-center mx-auto">
+          <a
+            href="https://splitmic.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit SplitMic"
+            className="relative w-16 h-16 mb-6 rounded-2xl overflow-hidden border border-white/[0.06] bg-surface-2 flex items-center justify-center mx-auto transition-all duration-300 hover:border-accent/40 hover:scale-105"
+          >
             <Image
               src="/SplitMic.jpg.png"
               alt="SplitMic Logo"
@@ -20,7 +26,7 @@ export function SplitMicBanner() {
               height={64}
               className="object-cover"
             />
-          </div>
+          </a>
         </Reveal>
         
         <Reveal delay={0.1}>
