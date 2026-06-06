@@ -24,9 +24,9 @@ export function Hero() {
       />
 
       <div className="max-w-7xl w-full mx-auto px-6 md:px-10 pt-16 pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left: Content */}
-          <div className="relative z-10">
+          <div className="relative z-10 max-w-xl">
             <Reveal delay={0}>
               <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/80 mb-6 md:mb-8">
                 <span className="w-10 h-px bg-accent/40" />
