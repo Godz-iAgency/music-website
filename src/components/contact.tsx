@@ -3,9 +3,8 @@
 import { useState } from "react";
 import { Reveal } from "@/components/ui/reveal";
 
-// ⬇️ n8n WEBHOOK URL (production)
-const N8N_WEBHOOK_URL =
-  "https://n8n.srv1519708.hstgr.cloud/webhook/a0524bf4-27c8-4cfa-b2ca-dd4f887a469d";
+const N8N_WEBHOOK_URL = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL!;
+const N8N_AUTH_SECRET = process.env.NEXT_PUBLIC_N8N_AUTH_SECRET!;
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -22,7 +21,10 @@ export function Contact() {
     try {
       const res = await fetch(N8N_WEBHOOK_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "GODZ-i Website Message": N8N_AUTH_SECRET,
+        },
         body: JSON.stringify({ name, email, message }),
       });
 
