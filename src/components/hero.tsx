@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100dvh] flex items-start w-full overflow-hidden pt-[112px] pb-14 md:pb-16 lg:pt-[120px]"
+      className="relative min-h-[100dvh] w-full overflow-hidden"
     >
       {/* Deep ambient gradients */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(232,67,10,0.07),transparent_60%)]" />
@@ -23,7 +23,7 @@ export function Hero() {
         }}
       />
 
-      <div className="max-w-7xl w-full mx-auto px-6 md:px-10 py-8 md:py-12">
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-10 pt-[120px] pb-14 md:pt-[140px] md:pb-16 lg:pt-[160px] lg:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left: Content */}
           <div className="relative z-10">

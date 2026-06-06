@@ -27,11 +27,16 @@ export function Navigation() {
     e.preventDefault();
     setMobileOpen(false);
     setTimeout(() => {
-      const element = document.getElementById(targetId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      if (targetId === 'hero') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const element = document.getElementById(targetId);
+        if (element) {
+          const top = element.getBoundingClientRect().top + window.scrollY - 88;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
       }
-    }, 150);
+    }, 300);
   };
 
   return (
