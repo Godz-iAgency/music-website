@@ -82,7 +82,7 @@ export function Hero() {
           {/* Right: Video */}
           <div className="flex justify-center lg:justify-end">
             <Reveal delay={0.15} direction="right">
-              <div className="relative w-full max-w-[400px] sm:max-w-[460px] lg:max-w-[520px] mx-auto">
+              <div className="relative w-full max-w-[400px] sm:max-w-[460px] lg:max-w-[520px] mx-auto lg:mx-0">
                 {/* Glow ring behind video */}
                 <div className="absolute -inset-6 rounded-3xl bg-gradient-to-br from-accent/12 via-transparent to-accent/4 blur-2xl opacity-50" />
                 <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-accent/15 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-700" />
