@@ -66,8 +66,8 @@ export function WhoWeHelp() {
               <StaggerItem
                 key={title}
                 className="h-[380px] w-full cursor-pointer select-none"
-                style={{ perspective: "1000px" }}
               >
+                <div style={{ perspective: "1000px" }} className="w-full h-full">
                 <div
                   onClick={() => toggleFlip(index)}
                   className="relative w-full h-full duration-700"
