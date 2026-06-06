@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100dvh] flex flex-col justify-center items-center w-full overflow-hidden"
+      className="relative min-h-[100dvh] flex items-center w-full overflow-hidden pt-[88px] pb-12 md:pb-16"
     >
       {/* Deep ambient gradients */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(232,67,10,0.07),transparent_60%)]" />
@@ -23,19 +23,19 @@ export function Hero() {
         }}
       />
 
-      <div className="max-w-7xl w-full mx-auto px-6 md:px-10 pt-[120px] pb-16 md:pt-[140px] md:pb-20 lg:pt-[160px] lg:pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-10 py-8 md:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left: Content */}
-          <div className="order-2 lg:order-1 relative z-10">
+          <div className="relative z-10">
             <Reveal delay={0}>
-              <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/80 mb-10">
+              <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/80 mb-6 md:mb-8">
                 <span className="w-10 h-px bg-accent/40" />
                 AI Systems for the Music Industry
               </span>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h1 className="text-[2.75rem] md:text-[3.75rem] lg:text-[4.5rem] xl:text-[5rem] font-extrabold tracking-[-0.035em] leading-[0.95] text-white mb-10">
+              <h1 className="text-[2.75rem] md:text-[3.75rem] lg:text-[4.25rem] xl:text-[5rem] font-extrabold tracking-[-0.035em] leading-[0.95] text-white mb-6 md:mb-8">
                 The music industry
                 <br />
                 does not reward
@@ -45,7 +45,7 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={0.2}>
-              <p className="text-base md:text-lg text-zinc-300 leading-relaxed max-w-[46ch] mb-12">
+              <p className="text-base md:text-lg text-zinc-300 leading-relaxed max-w-[46ch] mb-8 md:mb-10">
                 AI systems for bands, venues, talent buyers, record labels, and festivals. Smoother. Faster. Easier to manage.
               </p>
             </Reveal>
@@ -80,9 +80,9 @@ export function Hero() {
           </div>
 
           {/* Right: Video */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+          <div className="flex justify-center lg:justify-end">
             <Reveal delay={0.15} direction="right">
-              <div className="relative w-full max-w-[520px]">
+              <div className="relative w-full max-w-[400px] sm:max-w-[460px] lg:max-w-[520px] mx-auto">
                 {/* Glow ring behind video */}
                 <div className="absolute -inset-6 rounded-3xl bg-gradient-to-br from-accent/12 via-transparent to-accent/4 blur-2xl opacity-50" />
                 <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-accent/15 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-700" />
