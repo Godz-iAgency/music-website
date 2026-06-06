@@ -6,23 +6,33 @@ import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/reveal";
 const PROOFS = [
   {
     num: "01",
-    title: "Lead Generation & Outreach System",
-    client: "Marketing Agencies",
+    client: "Ras Mundi",
     description:
-      "Automated prospect sourcing and outreach — pipeline runs without founder involvement.",
+      "EPK, fan intake system, automated venue outreach pipeline, performance reporting. Delivered in two weeks.",
+    link: "https://rasmundimusic.com",
+    linkText: "rasmundimusic.com",
   },
   {
     num: "02",
-    title: "Content Ideas Generation System",
-    client: "Zoom Out Social Marketing Agency",
+    client: "DJ AK — Austin DJ, 300+ Five-Star Reviews",
     description:
-      "Saves 10-15 hours per week — content ideas generated and stored in Google Sheets automatically.",
+      "Automated venue outreach system. 100 venues contacted. Automated follow-ups sent 48 hours apart. Zero manual work after setup.",
+    link: "https://itzdjak.com",
+    linkText: "itzdjak.com",
+  },
+  {
+    num: "03",
+    client: "SplitMic",
+    description:
+      "Music industry connection platform built for Austin. Connects bands, venues, talent buyers, record labels, and festivals on one platform.",
+    link: "https://splitmic.com",
+    linkText: "Join SplitMic free if you're in Austin",
   },
 ];
 
 export function Proof() {
   return (
-    <section id="proof" className="relative flex flex-col items-center w-full section-spacing overflow-hidden bg-surface">
+    <section id="work" className="relative flex flex-col items-center w-full section-spacing overflow-hidden bg-surface">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.05] to-transparent" />
 
       <div className="max-w-7xl w-full mx-auto px-6 md:px-10">
@@ -35,13 +45,13 @@ export function Proof() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="text-3xl md:text-5xl lg:text-[3.5rem] font-extrabold tracking-[-0.03em] text-white">
-              Real Builds. Real Results.
+              What We&apos;ve Built.
             </h2>
           </Reveal>
         </div>
 
         <StaggerContainer staggerDelay={0.06}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-6">
             {PROOFS.map((proof) => (
               <StaggerItem key={proof.num}>
                 <ProofCard {...proof} />
@@ -56,18 +66,20 @@ export function Proof() {
 
 function ProofCard({
   num,
-  title,
   client,
   description,
+  link,
+  linkText,
 }: {
   num: string;
-  title: string;
   client: string;
   description: string;
+  link: string;
+  linkText: string;
 }) {
   return (
     <motion.div
-      className="group relative h-full rounded-2xl bg-surface-2 border border-white/[0.04] p-9 md:p-11 overflow-hidden hover:border-accent/15 transition-all duration-500"
+      className="group relative h-full rounded-2xl bg-surface-2 border border-white/[0.04] p-9 md:p-11 overflow-hidden hover:border-accent/15 transition-all duration-500 flex flex-col justify-between"
       whileHover={{ y: -5 }}
       transition={{ type: "spring", stiffness: 200, damping: 20 }}
     >
@@ -79,15 +91,24 @@ function ProofCard({
         {num}
       </span>
 
-      <div className="relative z-10">
-        <h3 className="text-base md:text-lg font-bold tracking-tight text-white mb-3 leading-snug">
-          {title}
-        </h3>
-        <span className="inline-flex items-center gap-2.5 text-[11px] font-bold tracking-[0.1em] uppercase text-accent/80 mb-5">
-          <span className="w-2 h-2 rounded-full bg-accent/50" />
-          {client}
-        </span>
-        <p className="text-[14px] text-zinc-400 leading-relaxed">{description}</p>
+      <div className="relative z-10 flex flex-col h-full justify-between">
+        <div>
+          <h3 className="text-lg md:text-xl font-bold tracking-tight text-white mb-4 leading-snug">
+            {client}
+          </h3>
+          <p className="text-[14px] text-zinc-400 leading-relaxed mb-8">{description}</p>
+        </div>
+        <div>
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-accent-light transition-colors group/link"
+          >
+            {linkText}
+            <span className="group-hover/link:translate-x-1 transition-transform duration-200"> &rarr;</span>
+          </a>
+        </div>
       </div>
     </motion.div>
   );

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Reveal } from "@/components/ui/reveal";
 
 const STATS = [
-  { value: "5+", label: "Systems Built" },
+  { value: "25", label: "Years in Music" },
   { value: "Austin, TX", label: "Based In" },
   { value: "100%", label: "AI-Native Stack" },
   { value: "0", label: "Fluff Tolerated" },
@@ -32,21 +32,19 @@ export function About() {
             </Reveal>
             <Reveal delay={0.1}>
               <h2 className="text-3xl md:text-5xl lg:text-[3.5rem] font-extrabold tracking-[-0.03em] text-white mb-10 leading-tight">
-                Who&apos;s Behind GODZ-i.
+                Built by Someone Who Lived It.
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
               <p className="text-[15px] md:text-base text-zinc-300 leading-[1.85] mb-12 max-w-[55ch]">
-                I&apos;m Christopher Downer, founder of GODZ-i, based in
-                Austin, Texas. GODZ-i operates with a dedicated technical
-                delivery team that designs, builds, and maintains AI automation
-                systems for marketing agencies across the US. I lead every
-                client relationship, strategy session, and audit personally —
-                our team handles implementation and ongoing system performance
-                so your automations run without interruption. Our focus is one
-                thing: replacing manual, founder-dependent processes with
-                reliable systems that scale.
+                25 years in the music industry. International touring. Artist management. Live production. I know what it costs to run this business on manual processes. I built GODZ-i to fix that.
               </p>
+            </Reveal>
+            <Reveal delay={0.25}>
+              <div className="mb-10">
+                <p className="text-lg font-bold text-white">Christopher Downer</p>
+                <p className="text-xs text-zinc-400 mt-1">Founder, GODZ-i &mdash; Austin, Texas</p>
+              </div>
             </Reveal>
             <Reveal delay={0.3}>
               <a

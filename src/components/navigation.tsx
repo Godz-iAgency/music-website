@@ -7,9 +7,8 @@ import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "Home", href: "#hero" },
-  { label: "Solutions", href: "#two-path" },
-  { label: "Process", href: "#process" },
-  { label: "Work", href: "#proof" },
+  { label: "Who We Help", href: "#who-we-help" },
+  { label: "Work", href: "#work" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "About", href: "#about" },
 ];
@@ -122,9 +121,8 @@ export function Navigation() {
           >
             <div className="px-6 py-8 flex items-stretch flex-col gap-1">
               <a href="#hero" onClick={(e) => handleMobileNavClick(e, 'hero')} className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent" style={{ WebkitTapHighlightColor: 'transparent' }}>Home</a>
-              <a href="#two-path" onClick={(e) => handleMobileNavClick(e, 'two-path')} className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent" style={{ WebkitTapHighlightColor: 'transparent' }}>Solutions</a>
-              <a href="#process" onClick={(e) => handleMobileNavClick(e, 'process')} className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent" style={{ WebkitTapHighlightColor: 'transparent' }}>Process</a>
-              <a href="#proof" onClick={(e) => handleMobileNavClick(e, 'proof')} className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent" style={{ WebkitTapHighlightColor: 'transparent' }}>Work</a>
+              <a href="#who-we-help" onClick={(e) => handleMobileNavClick(e, 'who-we-help')} className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent" style={{ WebkitTapHighlightColor: 'transparent' }}>Who We Help</a>
+              <a href="#work" onClick={(e) => handleMobileNavClick(e, 'work')} className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent" style={{ WebkitTapHighlightColor: 'transparent' }}>Work</a>
               <a href="#testimonials" onClick={(e) => handleMobileNavClick(e, 'testimonials')} className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent" style={{ WebkitTapHighlightColor: 'transparent' }}>Testimonials</a>
               <a href="#about" onClick={(e) => handleMobileNavClick(e, 'about')} className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent" style={{ WebkitTapHighlightColor: 'transparent' }}>About</a>
               <div className="mt-6 pt-6 border-t border-white/[0.04] flex flex-col gap-3">

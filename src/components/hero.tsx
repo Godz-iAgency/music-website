@@ -30,24 +30,23 @@ export function Hero() {
             <Reveal delay={0}>
               <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/80 mb-10">
                 <span className="w-10 h-px bg-accent/40" />
-                AI Automation for Marketing Agencies
+                AI Systems for the Music Industry
               </span>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h1 className="text-[2.75rem] md:text-[3.75rem] lg:text-[5rem] xl:text-[5.5rem] font-extrabold tracking-[-0.035em] leading-[0.95] text-white mb-10">
-                Marketing Agencies
+              <h1 className="text-[2.75rem] md:text-[3.75rem] lg:text-[4.5rem] xl:text-[5rem] font-extrabold tracking-[-0.035em] leading-[0.95] text-white mb-10">
+                The music industry
                 <br />
-                Scale on Systems.
+                does not reward
                 <br />
-                <span className="gradient-text">Build Yours.</span>
+                <span className="gradient-text">the most talented.</span>
               </h1>
             </Reveal>
 
             <Reveal delay={0.2}>
               <p className="text-base md:text-lg text-zinc-300 leading-relaxed max-w-[46ch] mb-12">
-                We help marketing agencies generate leads, produce content, and
-                run operations without adding headcount.
+                AI systems for bands, venues, talent buyers, record labels, and festivals. Smoother. Faster. Easier to manage.
               </p>
             </Reveal>
 
@@ -64,7 +63,7 @@ export function Hero() {
                     Book a Free Strategy Session
                   </MagneticButton>
                   <a
-                    href="#process"
+                    href="#who-we-help"
                     className="inline-flex items-center gap-2 px-6 py-4 text-sm font-medium text-zinc-300 hover:text-white transition-colors duration-300"
                   >
                     Learn more
@@ -74,7 +73,7 @@ export function Hero() {
                   </a>
                 </div>
                 <p className="text-sm md:text-base font-medium text-zinc-400 pl-1 w-full shrink-0">
-                  No commitment. 30-minute call. We will tell you exactly what to build.
+                  30-minute call. No commitment.
                 </p>
               </div>
             </Reveal>

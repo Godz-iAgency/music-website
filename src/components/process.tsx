@@ -6,33 +6,33 @@ import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/reveal";
 const STEPS = [
   {
     num: "01",
-    title: "Audit",
+    title: "Audit.",
     description:
-      "We map your current workflows to identify where automation creates immediate leverage.",
+      "We map your workflows and find where automation wins.",
   },
   {
     num: "02",
-    title: "Consult",
+    title: "Consult.",
     description:
-      "We prioritize the highest-ROI opportunities that save the most time and directly impact revenue.",
+      "We prioritize the highest-impact builds for your operation.",
   },
   {
     num: "03",
-    title: "Implement",
+    title: "Build.",
     description:
-      "We build and integrate AI automations directly into your existing stack.",
+      "We deliver your AI system inside your existing tools.",
   },
   {
     num: "04",
-    title: "Optimize",
+    title: "Optimize.",
     description:
-      "We stay involved post-launch to monitor performance and improve the system as you grow.",
+      "We improve performance after launch.",
   },
 ];
 
 export function Process() {
   return (
-    <section id="process" className="relative flex flex-col items-center w-full section-spacing overflow-hidden bg-surface">
+    <section id="how-it-works" className="relative flex flex-col items-center w-full section-spacing overflow-hidden bg-surface">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.05] to-transparent" />
 
       <div className="max-w-7xl w-full mx-auto px-6 md:px-10">
@@ -40,12 +40,12 @@ export function Process() {
           <Reveal>
             <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/80 mb-7">
               <span className="w-10 h-px bg-accent/40" />
-              The Process
+              How It Works
             </span>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="text-3xl md:text-5xl lg:text-[3.5rem] font-extrabold tracking-[-0.03em] text-white">
-              Here&apos;s How We Work.
+              Four Steps. One System.
             </h2>
           </Reveal>
         </div>

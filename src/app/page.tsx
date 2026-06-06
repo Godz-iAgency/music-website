@@ -1,15 +1,12 @@
 import { Navigation } from "@/components/navigation";
 import { Hero } from "@/components/hero";
-import { TwoPath } from "@/components/two-path";
-import { Problem } from "@/components/problem";
+import { WhoWeHelp } from "@/components/who-we-help";
 import { Process } from "@/components/process";
-import { Services } from "@/components/services";
-import { Technology } from "@/components/technology";
 import { Proof } from "@/components/proof";
-import { FounderStory } from "@/components/founder-story";
 import { Testimonials } from "@/components/testimonials";
 import { About } from "@/components/about";
 import { FinalCTA } from "@/components/final-cta";
+import { SplitMicBanner } from "@/components/splitmic-banner";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -18,16 +15,13 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <TwoPath />
-        <Problem />
+        <WhoWeHelp />
         <Process />
-        <Services />
-        <Technology />
         <Proof />
-        <FounderStory />
         <Testimonials />
         <About />
         <FinalCTA />
+        <SplitMicBanner />
       </main>
       <Footer />
     </>

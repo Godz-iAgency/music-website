@@ -33,7 +33,7 @@ export function FinalCTA() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="text-3xl md:text-5xl lg:text-[4.25rem] font-extrabold tracking-[-0.03em] text-white leading-[1.05] max-w-[780px] mx-auto mb-7">
-            Your agency doesn&apos;t have a talent problem.
+            Your operation doesn&apos;t have a talent problem.
             <br />
             <span className="gradient-text">It has a systems problem.</span>
           </h2>
@@ -45,7 +45,7 @@ export function FinalCTA() {
         </Reveal>
         <Reveal delay={0.2}>
           <p className="text-sm text-accent/80 font-semibold tracking-wide uppercase mb-12">
-            Currently accepting 3 founding clients
+            Currently accepting 3 new clients
           </p>
         </Reveal>
         <Reveal delay={0.25}>
@@ -63,8 +63,8 @@ export function FinalCTA() {
           </MagneticButton>
         </Reveal>
         <Reveal delay={0.3} className="w-full flex justify-center">
-          <p className="mt-5 text-[13px] md:text-sm text-zinc-400 font-medium max-w-[520px] leading-relaxed text-center">
-            We take on a limited number of new agency builds each quarter. If you are ready to fix the systems problem, book your call now.
+          <p className="mt-5 text-[13px] md:text-sm text-zinc-400 font-medium max-w-[520px] leading-relaxed text-center mx-auto">
+            We take on a limited number of new builds each quarter. If you are ready to fix the systems problem, book your call now.
           </p>
         </Reveal>
       </div>

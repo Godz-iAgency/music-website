@@ -7,30 +7,32 @@ import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/reveal";
 const TESTIMONIALS = [
   {
     quote:
-      "Christopher built our complete artist operations system including EPK, fan outreach automation, venue booking pipeline, and performance reporting all integrated. What took us months to figure out he delivered in a couple of weeks. The system is now handling our entire workflow.",
+      "Christopher built our complete artist operations system — EPK, fan outreach automation, venue booking pipeline, and performance reporting all integrated. What took us months to figure out he delivered in a couple of weeks. The system is now handling our entire workflow.",
     author: "Matthias Gautreaux",
     title: "Founder",
     company: "Ras Mundi",
     url: "https://rasmundimusic.com",
-    photo: "/matthias_gautreaux.jpg",
+    photo: "/matthias_gautreaux.jpg.jpg",
+    isSocial: false,
   },
   {
     quote:
-      "I needed a marketing overhaul fast. Christopher did not just audit our marketing, he rebuilt it. The system he put in place is generating qualified leads consistently. He delivered enterprise level work on a timeline that works for a growing business.",
-    author: "Travis Gobson",
-    title: "Founder",
-    company: "Assemble at Ease",
-    url: "https://assembleatease.com",
-    photo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a1a1aa'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E",
-  },
-  {
-    quote:
-      "Christopher built us a content production system that changed how we deliver to clients. Clients fill out a form and we generate professional content automatically. What used to take our team days now happens in hours. This is how modern agencies scale without hiring more people.",
+      "Christopher built an automated outreach system that contacted 100 venues and sent follow-ups automatically. I did not touch my inbox. The bookings came in while I focused on performing.",
     author: "Andrew Knor",
-    title: "Founder",
-    company: "Zoom Out Social",
-    url: "https://zoomoutsocial.com",
-    photo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a1a1aa'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E",
+    title: "Talent Buyer",
+    company: "The Empire",
+    url: "#",
+    photo: "/andrew_knor.jpg.png",
+    isSocial: false,
+  },
+  {
+    quote: "Music Industry Connected.",
+    author: "The platform built for Austin's music ecosystem.",
+    title: "SplitMic",
+    company: "SplitMic",
+    url: "https://splitmic.com",
+    photo: "/SplitMic.jpg.png",
+    isSocial: true,
   },
 ];
 
@@ -72,46 +74,74 @@ export function Testimonials() {
                 {/* Subtle top glow on hover */}
                 <div className="absolute top-0 left-0 right-0 h-[2px] rounded-t bg-accent/30 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out origin-left" />
 
-                <div className="relative z-10 mb-8">
-                  <svg
-                    className="w-8 h-8 text-accent/40 mb-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                  <p className="text-[14px] md:text-[15px] text-zinc-300 leading-relaxed">
-                    &ldquo;{testimonial.quote}&rdquo;
-                  </p>
-                </div>
-
-                <div className="relative z-10 pt-6 border-t border-white/[0.06] flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white/10 flex-shrink-0">
-                    <Image
-                      src={testimonial.photo}
-                      alt={testimonial.author}
-                      fill
-                      className="object-cover"
-                      sizes="48px"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold text-white tracking-wide">
-                      {testimonial.author}
-                    </p>
-                    <p className="text-[11px] text-zinc-500 mt-0.5 tracking-[0.04em]">
-                      {testimonial.title},{" "}
+                {testimonial.isSocial ? (
+                  <div className="relative z-10 flex flex-col h-full justify-between items-center text-center py-4">
+                    <div className="flex flex-col items-center">
+                      <div className="relative w-16 h-16 mb-6 rounded-2xl overflow-hidden border border-white/[0.06] bg-surface-2 flex items-center justify-center mx-auto">
+                        <Image
+                          src={testimonial.photo}
+                          alt="SplitMic Logo"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <p className="text-xl md:text-2xl font-black text-white mb-3 tracking-tight">
+                        {testimonial.quote}
+                      </p>
+                      <p className="text-xs text-zinc-400 font-medium max-w-[200px] mx-auto">
+                        {testimonial.author}
+                      </p>
+                    </div>
+                    <div className="pt-6 w-full border-t border-white/[0.06] mt-8">
                       <a
                         href={testimonial.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-accent/70 hover:text-accent transition-colors duration-200 underline underline-offset-2 decoration-accent/30 hover:decoration-accent/60"
+                        className="text-xs font-semibold text-accent hover:text-accent-light transition-colors"
                       >
-                        {testimonial.company}
+                        splitmic.com &rarr;
                       </a>
-                    </p>
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <>
+                    <div className="relative z-10 mb-8">
+                      <svg
+                        className="w-8 h-8 text-accent/40 mb-6"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                      </svg>
+                      <p className="text-[14px] md:text-[15px] text-zinc-300 leading-relaxed">
+                        &ldquo;{testimonial.quote}&rdquo;
+                      </p>
+                    </div>
+
+                    <div className="relative z-10 pt-6 border-t border-white/[0.06] flex items-center gap-4">
+                      <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white/10 flex-shrink-0">
+                        <Image
+                          src={testimonial.photo}
+                          alt={testimonial.author}
+                          fill
+                          className="object-cover"
+                          sizes="48px"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-sm font-bold text-white tracking-wide">
+                          {testimonial.author}
+                        </p>
+                        <p className="text-[11px] text-zinc-500 mt-0.5 tracking-[0.04em]">
+                          {testimonial.title},{" "}
+                          <span className="text-accent/70 font-medium">
+                            {testimonial.company}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                )}
               </motion.div>
             </StaggerItem>
           ))}
