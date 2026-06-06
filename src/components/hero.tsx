@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100dvh] flex items-center w-full overflow-hidden pt-[88px] pb-12 md:pb-16"
+      className="relative min-h-[100dvh] flex items-start w-full overflow-hidden pt-[112px] pb-14 md:pb-16 lg:pt-[120px]"
     >
       {/* Deep ambient gradients */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(232,67,10,0.07),transparent_60%)]" />
