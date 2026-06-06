@@ -136,6 +136,7 @@ export function WhoWeHelp() {
                     </div>
                   </div>
                 </div>
+                </div>
               </StaggerItem>
             );
           })}
