@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <main className="pt-[80px]">
+      <main style={{ paddingTop: '80px' }}>
         <Hero />
         <WhoWeHelp />
         <Process />
