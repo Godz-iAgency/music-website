@@ -36,9 +36,17 @@ export function About() {
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="text-[15px] md:text-base text-zinc-300 leading-[1.85] mb-12 max-w-[55ch]">
-                25 years in the music industry. International touring. Artist management. Live production. I know what it costs to run this business on manual processes. I built GODZ-i to fix that.
-              </p>
+              <div className="space-y-5 mb-12 max-w-[55ch]">
+                <p className="text-[15px] md:text-base text-zinc-300 leading-[1.85]">
+                  25 years in the music industry. International touring across Europe, Asia, and the Caribbean. Performed with Jimmy Cliff and Rita Marley. Represented Jamaica as a music ambassador. Broadway with Ashé Caribbean Performing Arts Company.
+                </p>
+                <p className="text-[15px] md:text-base text-zinc-300 leading-[1.85]">
+                  I know what it costs to run a music business on manual processes. I built GODZ-i to fix the systems problem that kills independent operators.
+                </p>
+                <p className="text-[15px] md:text-base text-zinc-300 leading-[1.85]">
+                  GODZ-i is the only AI systems company built exclusively for the music industry.
+                </p>
+              </div>
             </Reveal>
             <Reveal delay={0.25}>
               <div className="mb-10">

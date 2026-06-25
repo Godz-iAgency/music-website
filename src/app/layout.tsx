@@ -15,16 +15,21 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "GODZ-i | AI Automation Systems for Marketing Agencies",
+  title: "GODZ-i | AI Systems for the Music Industry",
   description:
-    "AI automation systems built for marketing agencies. We automate content generation, client onboarding, lead follow up, reporting, and GEO SEO so you can scale without adding headcount.",
+    "AI automation systems built exclusively for the music industry. Booking pipelines, submission scoring, fan capture, and operations automation for venues, talent buyers, bands, record labels, and festivals in Austin, Texas.",
   robots: "index, follow",
   openGraph: {
-    title: "GODZ-i | AI Automation Systems for Marketing Agencies",
+    title: "GODZ-i | AI Systems for the Music Industry",
     description:
-      "We help marketing agencies generate leads, produce content, and run operations without adding headcount.",
+      "We build AI systems for music industry operators. Venues, talent buyers, bands, record labels, and festivals.",
     type: "website",
-    url: "https://godz-i.com",
+    url: "https://www.godz-iagency.com",
+  },
+  twitter: {
+    title: "GODZ-i | AI Systems for the Music Industry",
+    description:
+      "AI automation systems built exclusively for the music industry. Austin, Texas.",
   },
   appleWebApp: {
     capable: true,

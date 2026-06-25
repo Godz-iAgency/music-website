@@ -7,7 +7,7 @@ import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/reveal";
 const TESTIMONIALS = [
   {
     quote:
-      "Christopher built our complete artist operations system — EPK, fan outreach automation, venue booking pipeline, and performance reporting all integrated. What took us months to figure out he delivered in a couple of weeks. The system is now handling our entire workflow.",
+      "Christopher built our complete artist operations system. EPK, fan outreach automation, venue booking pipeline, and performance reporting. All integrated. Delivered in two weeks. What used to take hours every week now runs without us.",
     author: "Matthias Gautreaux",
     title: "Founder",
     company: "Ras Mundi",
@@ -17,7 +17,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "Christopher built an automated outreach system that contacted 100 venues and sent follow-ups automatically. I did not touch my inbox. The bookings came in while I focused on performing.",
+      "Christopher built an automated outreach system that contacted 100 venues and sent follow-ups automatically. I did not touch my inbox. The bookings came in while I was performing.",
     author: "Andrew Knor",
     title: "Talent Buyer",
     company: "The Empire",
@@ -144,6 +144,12 @@ export function Testimonials() {
             </StaggerItem>
           ))}
         </StaggerContainer>
+
+        <Reveal delay={0.15}>
+          <p className="mt-12 md:mt-16 text-center text-sm font-semibold tracking-[0.04em] text-accent">
+            Currently accepting 3 new clients. Engagements are limited and scoped.
+          </p>
+        </Reveal>
       </div>
     </section>
   );

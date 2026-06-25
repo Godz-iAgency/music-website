@@ -45,9 +45,14 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={0.2}>
-              <p className="text-base md:text-lg text-zinc-300 leading-relaxed max-w-[46ch] mb-8 md:mb-10">
-                AI systems for bands, venues, talent buyers, record labels, and festivals. Smoother. Faster. Easier to manage.
-              </p>
+              <div className="max-w-[46ch] mb-8 md:mb-10">
+                <p className="text-base md:text-lg text-zinc-300 leading-relaxed">
+                  We build AI systems for venue booking managers and talent buyers running their operation manually. Bands, record labels, and festivals too.
+                </p>
+                <p className="text-sm md:text-[15px] text-zinc-400 leading-relaxed mt-4">
+                  Built exclusively for the music industry. By someone who spent 25 years inside it.
+                </p>
+              </div>
             </Reveal>
 
             <Reveal delay={0.3}>
@@ -60,7 +65,7 @@ export function Hero() {
                     className="inline-flex items-center px-9 py-[18px] bg-accent hover:bg-accent-light text-white text-sm font-bold tracking-[0.06em] uppercase rounded-xl glow-pulse transition-all duration-300"
                     strength={0.12}
                   >
-                    Book a Free Strategy Session
+                    Book a Free Discovery Call
                   </MagneticButton>
                   <a
                     href="#who-we-help"
@@ -73,7 +78,7 @@ export function Hero() {
                   </a>
                 </div>
                 <p className="text-sm md:text-base font-medium text-zinc-400 pl-1 w-full shrink-0">
-                  30-minute call. No commitment.
+                  30 minutes. No pitch. No commitment.
                 </p>
               </div>
             </Reveal>
