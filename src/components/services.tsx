@@ -1,33 +1,64 @@
 "use client";
 
-import { Mail, FileText, ClipboardList } from "lucide-react";
+import { Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/reveal";
 
-const SERVICES = [
+const CAL_LINK = "https://cal.com/christopher-downer-6pkxir/strategy-session";
+
+const PLANS = [
   {
-    icon: Mail,
-    title: "Lead Generation & Outreach",
-    description:
-      "Automated prospect sourcing, qualification, and outreach that keeps your pipeline full without founder involvement.",
-    badge: "For Your Agency",
-    badgeColor: "bg-accent/12 text-accent border border-accent/10",
+    tag: "Bands",
+    name: "Band Launchpad",
+    price: "From $750",
+    priceNote: "One-time",
+    headline: "Your complete booking infrastructure.",
+    features: [
+      "Professional EPK on your domain",
+      "Fan capture system",
+      "Automated venue outreach pipeline",
+      "Show listings with automated updates",
+      "Fan email follow-up sequences",
+    ],
   },
   {
-    icon: FileText,
-    title: "Content Production Systems",
-    description:
-      "Automated content ideation, repurposing, and scheduling that scales across all your clients.",
-    badge: "For Your Clients",
-    badgeColor: "bg-blue-500/8 text-blue-400 border border-blue-500/10",
+    tag: "Venues",
+    name: "Venue Intelligence System",
+    price: "$1,500",
+    priceNote: "Per month",
+    headline: "Stop sorting submissions by hand.",
+    features: [
+      "AI scoring for every band submission",
+      "Automated booking calendar management",
+      "48-hour response automation",
+      "Monthly performance reporting",
+    ],
   },
   {
-    icon: ClipboardList,
-    title: "Agency Ops & Reporting",
-    description:
-      "Automated onboarding, internal workflows, and client reporting that eliminates manual operational overhead.",
-    badge: "For Your Agency",
-    badgeColor: "bg-accent/12 text-accent border border-accent/10",
+    tag: "Talent Buyers",
+    name: "Talent Buyer Pipeline",
+    price: "$2,000",
+    priceNote: "Per month",
+    headline: "A deal pipeline that runs without you.",
+    features: [
+      "AI email triage and scoring",
+      "Automated outreach to 100+ venues",
+      "Centralized artist database",
+      "Deal stage tracking end to end",
+    ],
+  },
+  {
+    tag: "Festivals",
+    name: "Festival Operations Stack",
+    price: "From $5,000",
+    priceNote: "Plus $2,500 per month",
+    headline: "Your entire operations pipeline automated.",
+    features: [
+      "Artist and vendor application scoring",
+      "Sponsor outreach pipeline",
+      "Volunteer coordination automation",
+      "Post-festival analytics report",
+    ],
   },
 ];
 
@@ -45,59 +76,93 @@ export function Services() {
           <Reveal>
             <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/80 mb-7">
               <span className="w-10 h-px bg-accent/40" />
-              What We Build
+              Services
             </span>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="text-3xl md:text-5xl lg:text-[3.5rem] font-extrabold tracking-[-0.03em] text-white">
-              What We Build For Agencies.
+              What We Build.
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-5 text-sm text-zinc-500 max-w-2xl">
-              Engagements are priced based on scope and complexity. Book a call to get your custom quote.
+            <p className="mt-5 text-sm md:text-base text-zinc-400 max-w-2xl">
+              Fixed scope. Built to run without you.
             </p>
           </Reveal>
         </div>
 
         <StaggerContainer
-          className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6"
           staggerDelay={0.1}
         >
-          {SERVICES.map(
-            ({ icon: Icon, title, description, badge, badgeColor }) => (
-              <StaggerItem key={title}>
-                <motion.div
-                  className="group relative h-full rounded-2xl bg-surface-3 border border-white/[0.04] p-9 md:p-11 overflow-hidden hover:border-accent/15 transition-all duration-500"
-                  whileHover={{ y: -5 }}
-                  transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                >
-                  {/* Top accent — animates full width on hover */}
-                  <div className="absolute top-0 left-0 w-16 h-[2px] rounded-r bg-accent/30 group-hover:w-full transition-all duration-700 ease-out" />
+          {PLANS.map(({ tag, name, price, priceNote, headline, features }) => (
+            <StaggerItem key={name}>
+              <motion.div
+                className="group relative h-full flex flex-col rounded-2xl bg-surface-3 border border-accent/20 p-8 md:p-10 overflow-hidden hover:border-accent/40 transition-all duration-500"
+                whileHover={{ y: -4 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
+              >
+                {/* Tag */}
+                <span className="inline-block self-start text-[10px] font-bold tracking-[0.14em] uppercase px-3.5 py-1.5 rounded-lg bg-accent/10 text-accent border border-accent/15 mb-6">
+                  {tag}
+                </span>
 
-                  {/* Icon with glow */}
-                  <div className="relative w-14 h-14 rounded-xl bg-accent/8 border border-accent/10 flex items-center justify-center mb-7 group-hover:bg-accent/12 group-hover:border-accent/15 transition-all duration-300">
-                    <div className="absolute inset-0 rounded-xl bg-accent/5 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <Icon className="relative z-10 w-6 h-6 text-accent/80" strokeWidth={1.6} />
+                {/* Plan name */}
+                <h3 className="text-lg md:text-xl font-bold tracking-tight text-white mb-5">
+                  {name}
+                </h3>
+
+                {/* Price */}
+                <div className="pb-6 mb-6 border-b border-white/[0.06]">
+                  <div className="text-4xl md:text-5xl font-extrabold tracking-[-0.03em] text-white">
+                    {price}
                   </div>
+                  <div className="mt-2 text-xs font-semibold tracking-wide uppercase text-zinc-500">
+                    {priceNote}
+                  </div>
+                </div>
 
-                  <span
-                    className={`inline-block text-[10px] font-bold tracking-[0.12em] uppercase px-3.5 py-1.5 rounded-lg ${badgeColor} mb-6`}
-                  >
-                    {badge}
-                  </span>
+                {/* Headline */}
+                <p className="text-[15px] md:text-base font-semibold text-zinc-200 mb-6">
+                  {headline}
+                </p>
 
-                  <h3 className="text-lg md:text-xl font-bold tracking-tight text-white mb-4">
-                    {title}
-                  </h3>
-                  <p className="text-[14px] md:text-[15px] text-zinc-400 leading-relaxed">
-                    {description}
-                  </p>
-                </motion.div>
-              </StaggerItem>
-            )
-          )}
+                {/* Features */}
+                <ul className="flex flex-col gap-3.5 mb-9">
+                  {features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-3">
+                      <Check
+                        className="mt-0.5 w-4 h-4 shrink-0 text-accent"
+                        strokeWidth={2.4}
+                      />
+                      <span className="text-sm text-zinc-400 leading-relaxed">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA */}
+                <a
+                  href={CAL_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto inline-flex items-center justify-center w-full px-6 py-3.5 bg-accent hover:bg-accent-light text-white text-xs font-bold tracking-[0.08em] uppercase rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(232,67,10,0.12)] hover:shadow-[0_0_30px_rgba(232,67,10,0.22)]"
+                >
+                  Book a Discovery Call
+                </a>
+              </motion.div>
+            </StaggerItem>
+          ))}
         </StaggerContainer>
+
+        {/* Record labels note */}
+        <Reveal delay={0.1}>
+          <p className="mt-10 md:mt-12 text-center text-sm text-zinc-500 max-w-3xl mx-auto leading-relaxed">
+            Record labels: we build demo scoring, artist development tracking, and
+            roster communication automation. Contact us for a scoped engagement.
+          </p>
+        </Reveal>
       </div>
     </section>
   );

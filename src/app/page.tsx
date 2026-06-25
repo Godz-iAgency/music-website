@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero";
 import { WhoWeHelp } from "@/components/who-we-help";
 import { Process } from "@/components/process";
 import { Proof } from "@/components/proof";
+import { Services } from "@/components/services";
 import { Testimonials } from "@/components/testimonials";
 import { About } from "@/components/about";
 import { FinalCTA } from "@/components/final-cta";
@@ -19,6 +20,7 @@ export default function Home() {
         <WhoWeHelp />
         <Process />
         <Proof />
+        <Services />
         <Testimonials />
         <About />
         <FinalCTA />
