@@ -23,7 +23,7 @@ export function FinalCTA() {
         }}
       />
 
-      <div className="max-w-7xl w-full mx-auto px-6 md:px-10 text-center relative z-10">
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-10 flex flex-col items-center text-center relative z-10">
         <Reveal>
           <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/60 mb-10 justify-center">
             <span className="w-8 h-px bg-accent/25" />

@@ -9,10 +9,10 @@ export function SplitMicBanner() {
       {/* Top divider */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.05] to-transparent" />
 
-      <div className="max-w-7xl w-full mx-auto px-6 md:px-10">
-        <Reveal>
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-10 flex flex-col items-center">
+        <Reveal className="w-full max-w-3xl mx-auto">
           {/* Distinct contained card — separate from the main CTA block */}
-          <div className="relative max-w-3xl mx-auto rounded-3xl border border-white/[0.08] bg-surface-2 px-8 py-12 md:px-14 md:py-16 text-center overflow-hidden">
+          <div className="relative w-full rounded-3xl border border-white/[0.08] bg-surface-2 px-8 py-12 md:px-14 md:py-16 text-center overflow-hidden">
             {/* Soft accent glow inside the card */}
             <div className="absolute top-[-25%] left-1/2 -translate-x-1/2 w-[420px] h-[300px] rounded-full bg-accent/[0.05] blur-[110px] pointer-events-none" />
 
