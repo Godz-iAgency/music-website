@@ -54,7 +54,7 @@ Discovery Call link (use everywhere): https://cal.com/christopher-downer-6pkxir/
 - [ ] Task 13 — Create /case-studies Page
 - [ ] Task 14 — Update Navigation
 - [ ] Task 15 — Update Footer
-- [ ] Task 16 — Add SplitMic Callout Block to Homepage
+- [x] Task 16 — Add SplitMic Callout Block to Homepage — rewrote `splitmic-banner.tsx` as a distinct bordered card (outline CTA), placed after FinalCTA
 
 ## RECOMMENDED EXECUTION ORDER (remaining)
 
