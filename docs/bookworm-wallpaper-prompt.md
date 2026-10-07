@@ -1,0 +1,7 @@
+# Bookworm wallpaper
+
+Generated with the built-in image tool on 2026-10-07. The final 1536×1024 PNG is saved at public/products/bookworm-wallpaper.png. The original Bookworm poster, QR code and logos are overlaid separately and were not edited.
+
+## Final generation prompt
+
+Use case: stylized-concept. Asset type: a premium raster wallpaper for the visual background of a Bookworm AI portfolio card, landscape 3:2 composition. Create only a background, not an app screenshot or an advertisement. Match an existing Bookworm brand poster with luminous cyan-to-electric-blue-to-violet-to-magenta book/worm graphics, small network dots and curved connecting filaments. Rich midnight navy and indigo atmospheric base, softly illuminated cyan currents on the left and violet/magenta currents on the right, fine connected points and elegant flowing arcs suggesting knowledge and learning. The center should be a quiet, dark-indigo gradient with generous empty space for an existing portrait poster to be overlaid, while the outer areas have visible colored depth and gentle light. Avoid a flat black background; it should look like one cohesive cyan/blue/magenta knowledge environment. Refined, restrained, crisp digital wallpaper. No text, no lettering, no book logos, no recognizable icons, no QR codes, no white areas, no frames, no borders, no watermarks. Keep the lighting soft enough that small light-gray captions remain readable.
