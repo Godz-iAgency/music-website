@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Supplied product archives and temporary reference files are separate projects.
+    "Christoper Zip 2/**",
+    ".tmp/**",
   ]),
 ]);
 

@@ -15,7 +15,9 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#E8430A",
+  "description": "GODZ-i Agency builds production-ready software and AI-powered applications.",
+  "start_url": "/",
+  "theme_color": "#050507",
   "background_color": "#050507",
   "display": "standalone"
 }

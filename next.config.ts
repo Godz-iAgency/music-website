@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Keep resolution inside this application when other local projects have lockfiles.
+  turbopack: { root: process.cwd() },
 };
 
 export default nextConfig;

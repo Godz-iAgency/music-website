@@ -1,30 +1,24 @@
 import { Navigation } from "@/components/navigation";
 import { Hero } from "@/components/hero";
-import { WhoWeHelp } from "@/components/who-we-help";
-import { Process } from "@/components/process";
-import { Proof } from "@/components/proof";
-import { Services } from "@/components/services";
-import { Testimonials } from "@/components/testimonials";
-import { About } from "@/components/about";
-import { FinalCTA } from "@/components/final-cta";
-import { SplitMicBanner } from "@/components/splitmic-banner";
+import { SelectedWork } from "@/components/selected-work";
+import { Capabilities } from "@/components/capabilities";
+import { Technology } from "@/components/technology";
+import { Team } from "@/components/team";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { team } from "@/data/portfolio";
 
 export default function Home() {
   return (
     <>
-      <Navigation />
-      <main style={{ paddingTop: '80px' }}>
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <Navigation showTeam={team.length > 0} />
+      <main id="main-content" tabIndex={-1}>
         <Hero />
-        <WhoWeHelp />
-        <Process />
-        <Proof />
-        <Services />
-        <Testimonials />
-        <About />
-        <FinalCTA />
-        <SplitMicBanner />
+        <SelectedWork />
+        <Capabilities />
+        <Technology />
+        <Team members={team} />
         <Contact />
       </main>
       <Footer />

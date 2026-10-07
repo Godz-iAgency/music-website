@@ -1,124 +1,21 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { MagneticButton } from "@/components/ui/magnetic-button";
-import { Reveal } from "@/components/ui/reveal";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { HeroAnimation } from "@/components/hero-animation";
 
 export function Hero() {
   return (
-    <section
-      id="hero"
-      className="relative flex flex-col items-center min-h-[100dvh] w-full overflow-hidden"
-    >
-      {/* Deep ambient gradients */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(232,67,10,0.07),transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_80%_at_80%_50%,rgba(232,67,10,0.03),transparent_50%)]" />
-
-      {/* Grid pattern — very subtle */}
-      <div
-        className="absolute inset-0 opacity-[0.025]"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px)`,
-          backgroundSize: "80px 80px",
-        }}
-      />
-
-      <div className="max-w-7xl w-full mx-auto px-6 md:px-10 pt-16 pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* Left: Content */}
-          <div className="relative z-10 max-w-xl">
-            <Reveal delay={0}>
-              <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/80 mb-6 md:mb-8">
-                <span className="w-10 h-px bg-accent/40" />
-                AI Systems for the Music Industry
-              </span>
-            </Reveal>
-
-            <Reveal delay={0.1}>
-              <h1 className="text-[2.75rem] md:text-[3.75rem] lg:text-[4.25rem] xl:text-[5rem] font-extrabold tracking-[-0.035em] leading-[0.95] text-white mb-6 md:mb-8">
-                The music industry
-                <br />
-                does not reward
-                <br />
-                <span className="gradient-text">the most talented.</span>
-              </h1>
-            </Reveal>
-
-            <Reveal delay={0.2}>
-              <div className="max-w-[46ch] mb-8 md:mb-10">
-                <p className="text-base md:text-lg text-zinc-300 leading-relaxed">
-                  We build AI systems for venue booking managers and talent buyers running their operation manually. Bands, record labels, and festivals too.
-                </p>
-                <p className="text-sm md:text-[15px] text-zinc-400 leading-relaxed mt-4">
-                  Built exclusively for the music industry. By someone who spent 25 years inside it.
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.3}>
-              <div className="flex flex-col gap-5">
-                <div className="flex flex-wrap items-center gap-6">
-                  <MagneticButton
-                    href="https://cal.com/christopher-downer-6pkxir/strategy-session"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-9 py-[18px] bg-accent hover:bg-accent-light text-white text-sm font-bold tracking-[0.06em] uppercase rounded-xl glow-pulse transition-all duration-300"
-                    strength={0.12}
-                  >
-                    Book a Free Discovery Call
-                  </MagneticButton>
-                  <a
-                    href="#who-we-help"
-                    className="inline-flex items-center gap-2 px-6 py-4 text-sm font-medium text-zinc-300 hover:text-white transition-colors duration-300"
-                  >
-                    Learn more
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </a>
-                </div>
-                <p className="text-sm md:text-base font-medium text-zinc-400 pl-1 w-full shrink-0">
-                  30 minutes. No pitch. No commitment.
-                </p>
-              </div>
-            </Reveal>
-          </div>
-
-          {/* Right: Video */}
-          <div className="flex justify-center lg:justify-end">
-            <Reveal delay={0.15} direction="right">
-              <div className="relative w-full max-w-[400px] sm:max-w-[460px] lg:max-w-[520px] mx-auto lg:mx-0">
-                {/* Glow ring behind video */}
-                <div className="absolute -inset-6 rounded-3xl bg-gradient-to-br from-accent/12 via-transparent to-accent/4 blur-2xl opacity-50" />
-                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-accent/15 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-700" />
-
-                <motion.div
-                  className="relative overflow-hidden rounded-2xl border border-white/[0.06] shadow-[0_24px_80px_rgba(0,0,0,0.6)]"
-                  whileHover={{ scale: 1.01 }}
-                  transition={{ type: "spring", stiffness: 200, damping: 25 }}
-                >
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-auto aspect-square object-cover"
-                    poster="/christopher_downer.png"
-                  >
-                    <source src="/godzi-intro.webm" type="video/webm" />
-                    <source src="/godzi-intro.mp4" type="video/mp4" />
-                  </video>
-                  {/* Bottom fade */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050507] via-transparent to-transparent opacity-30" />
-                </motion.div>
-              </div>
-            </Reveal>
+    <section id="hero" className="hero" aria-labelledby="hero-heading">
+      <div className="container hero-layout">
+        <div className="hero-copy">
+          <p className="eyebrow hero-brand">GODZ-i Agency</p>
+          <h1 id="hero-heading">We build software <span>that works.</span></h1>
+          <p className="hero-description">AI. Marketplaces. Health. Finance.</p>
+          <div className="hero-actions">
+            <a href="#work" className="button button-accent">View Our Work <ArrowDown size={17} aria-hidden="true" /></a>
+            <a href="#contact" className="hero-contact">Contact Us <ArrowUpRight size={17} aria-hidden="true" /></a>
           </div>
         </div>
+        <HeroAnimation />
       </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#050507] to-transparent" />
     </section>
   );
 }

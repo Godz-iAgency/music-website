@@ -1,51 +1,37 @@
 import type { Metadata, Viewport } from "next";
-import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const title = "GODZ-i Agency | Software & AI Applications";
+const description = "GODZ-i Agency builds production-ready software and AI-powered applications.";
 
 export const viewport: Viewport = {
   themeColor: "#050507",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
 };
 
 export const metadata: Metadata = {
-  title: "GODZ-i | AI Systems for the Music Industry",
-  description:
-    "AI automation systems built exclusively for the music industry. Booking pipelines, submission scoring, fan capture, and operations automation for venues, talent buyers, bands, record labels, and festivals in Austin, Texas.",
-  robots: "index, follow",
+  metadataBase: new URL("https://www.godz-iagency.com"),
+  title,
+  description,
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "GODZ-i | AI Systems for the Music Industry",
-    description:
-      "We build AI systems for music industry operators. Venues, talent buyers, bands, record labels, and festivals.",
+    title,
+    description,
     type: "website",
-    url: "https://www.godz-iagency.com",
+    siteName: "GODZ-i Agency",
+    locale: "en_US",
+    url: "/",
   },
-  twitter: {
-    title: "GODZ-i | AI Systems for the Music Industry",
-    description:
-      "AI automation systems built exclusively for the music industry. Austin, Texas.",
-  },
+  twitter: { card: "summary_large_image", title, description },
   appleWebApp: {
     capable: true,
-    title: "GODZ-i",
+    title: "GODZ-i Agency",
     statusBarStyle: "black-translucent",
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className={`${geistMono.variable}`}>
-      <body>{children}</body>
-    </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="en"><body>{children}</body></html>;
 }
