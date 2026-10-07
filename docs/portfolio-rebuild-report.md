@@ -1,39 +1,28 @@
-# Portfolio rebuild
+# GODZ-i visual refinement
 
-The music-focused homepage is now a software portfolio with the requested hero, four linked apps, concise capabilities, eleven technologies and a simple contact composer. It uses the original dark theme and orange accent, supplied product imagery and the newly generated Cash Flow Tracker logo.
+The existing layout and dark/orange theme are preserved. The typography audit identified small labels, light heading weights and aggressive negative tracking. The refinement replaces Montserrat presentation with native system typography, clearer heading weights, readable body/utility text and consistent stroke weights for functional icons. Capabilities have simple purpose-specific outline icons and technology marks have restrained dark frames.
 
-## Products
+The homepage headline is now **Make room for what matters.** Its supporting copy connects the apps' shared purpose: **Learn more. Connect better. Live healthier. Move forward with clarity.** The social preview uses the new headline too.
 
-- Bookworm AI: https://bookworm-ai.app/ — existing headline and supplied poster.
-- SplitMic: https://www.splitmic.com/ — Music Industry Connected.
-- Six Plants: https://www.gbombs.app/ — Healthy eating made simple.
-- Cash Flow Tracker: https://cash-flow-tracker-godz-i.vercel.app/ — Every dollar counts.
+## Navigation
 
-Both Six Plants images appear in its card. Each entire card opens its live app. Original artwork is copied without edits. The cash-flow reference informed the requested cleaner logo's lime/cyan palette and flow-arrow concept.
+The expanded mobile menu used to increase the sticky header's document height. Anchor scrolling happened before the menu collapsed, so the destination moved upward afterward. The menu is now an absolute overlay below a constant-height header. Section offsets follow desktop/mobile header heights. Destination focus, immediate interaction, Escape dismissal and reduced-motion scrolling remain supported. Long sections scroll naturally rather than being compressed to fit a phone.
 
-## Contact
+## Product branding and contact
 
-The message icon opens a native modal with Subject and Message. Continue in Gmail opens Google's compose window to Christopher@godz-iagency.com. Use my email app opens the same draft via mailto. Visitors send from their email account. There is no automatic-send backend or webhook. No real email was sent during checks.
+The original Cash Flow Tracker green/gold logo and clear-flow.webp water artwork were copied without edits. The prior generated logo is replaced. A dark overlay and a framed intact mark keep its card readable. Other product imagery, links, slogans and card placements remain.
+
+The contact action reads **Message Us**, uses a refined message icon and retains Christopher@godz-iagency.com. The email-app alternative reads **Use your email app**. Company-facing wording is plural. Visitors send from the Gmail or email-app composer; no real messages are sent during verification.
 
 ## Animation and scope
 
-The original muted inline animation remains byte-for-byte unchanged, with pause/play and reduced-motion handling:
+The video loops automatically with no visible play/pause control. Reduced-motion preference handling remains. Both original media files are unchanged:
 
 - godzi-intro.webm SHA-256: 3AEE3A80D864FA86E47871F5739EB38E44D5AF68A68AA33A1DB65B57F4C73E71
 - godzi-intro.mp4 SHA-256: A846E80602C317615BCE518B85398C20F868BA43D63CCE128E6A6249D2021D6D
 
-The public homepage composition replaces the old marketing sections; unused legacy sources and separate project archives are retained. Team stays hidden because no staff information was supplied. Production environment values were not modified.
-
-## Logo generation
-
-Built-in image generation produced public/products/cash-flow-tracker.png (1942 by 809). Final prompt:
-
-> Final professional logo. Perfectly clean flat 2D graphic on a SOLID uniform very dark navy background #080d16. Horizontal centered logo: elegant lime-green (#b8e858) cash-flow symbol made of two opposing smooth rounded arrows in an S loop, with one cyan (#55cee3) arrow. To the right exact text "Cash Flow" in bold modern geometric sans-serif lime-green, second line "TRACKER" in cyan uppercase, widely spaced. Large flat solid fills. Crisp impeccable smooth edges. No transparency. NO texture, grain, artifacts, distress, glow, gradients, 3D, shadows, bevels, tiny dots, white, mockup or additional text. The only content is the logo on uniform dark navy. Wide logo layout filling most of the canvas with balanced padding.
-
-The retained dependency and deployment setup is unchanged. The explicit build root and archive exclusions prevent unrelated local projects from being bundled.
+No dependencies, production domain, environment values, team data or separate project archives were changed. Full-project lint retains its pre-existing eight errors and six warnings in unused legacy components; scoped checks cover the live page changes.
 
 ## Verification
 
-Production build and TypeScript passed. Scoped ESLint passed with zero warnings, and git diff --check passed. Browser review covered 1440x900, 768x1024, 390x844 and 320x740 with no horizontal overflow. All 18 images loaded, four app links were correct, and the message window fit both phone sizes. Subject/body URL encoding, initial focus, Escape dismissal, restored trigger focus and mobile navigation were verified. Browser console had no errors. Production smoke checks passed for the page, 21 assets, social preview and eleven browser JavaScript files with no contact-credential references. No email was sent.
-
-Full-project lint retains eight pre-existing errors and six warnings in unused legacy components, documented during the original rebuild. None of those sources changed.
+Production build and TypeScript passed; scoped ESLint and whitespace checks passed. The production smoke check verified four product cards, eleven technology entries, twenty-two asset requests and the social preview. Browser checks covered 320×740, 370×822, 390×844, 740×320, 768×1024, 1024×768 and 1440×900 viewports. No horizontal overflow appeared. Every phone/tablet menu destination exposed its heading below the header; the contact section remained fully readable when scrolling was limited by the end of the page. The message composer fit a narrow phone, scrolled on a landscape phone, encoded both email destinations correctly and restored focus after Escape. Product links opened their intended live sites. The original Cash Flow logo and water artwork loaded correctly. Several monochrome technology marks discovered during visual review now have sufficient contrast against their dark frames.

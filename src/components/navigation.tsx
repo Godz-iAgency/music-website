@@ -34,13 +34,13 @@ export function Navigation({ showTeam = false }: { showTeam?: boolean }) {
 
   function followAnchor(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
     setMobileOpen(false);
-    // Move focus out of the collapsing menu without delaying navigation.
+    // The menu is an overlay, so closing it never shifts the target section.
     const target = document.querySelector<HTMLElement>(href);
     if (target) {
       event.preventDefault();
       target.tabIndex = -1;
       target.focus({ preventScroll: true });
-      target.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
+      target.scrollIntoView({ block: "start", behavior: "instant" });
       history.pushState(null, "", href);
     }
   }

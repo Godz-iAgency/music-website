@@ -6,6 +6,7 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
   const content = (
     <>
       <div className={`product-visual product-visual-${product.theme}`}>
+        {product.background && <Image src={product.background} alt="" fill sizes="(max-width: 640px) 90vw, (max-width: 1100px) 45vw, 580px" className="product-background" />}
         <div className="product-caption"><span>{product.category}</span><span aria-hidden="true">0{index + 1}</span></div>
         <div className="product-brand">
           {product.artwork ? (

@@ -9,6 +9,7 @@ export type Product = {
   url: string | null;
   logo: { src: string; width: number; height: number } | null;
   artwork?: { src: string; width: number; height: number; alt: string };
+  background?: string;
   theme: "bookworm" | "splitmic" | "plants" | "cashflow";
 };
 
@@ -53,7 +54,8 @@ export const products: readonly Product[] = [
     capability: "Financial workflows, structured data, account allocation and business intelligence interfaces.",
     features: ["Income tracking", "Expense tracking", "Account balances", "Account allocation", "Transfers", "Personal vs. business classification", "Cash-flow visibility"],
     url: "https://cash-flow-tracker-godz-i.vercel.app/",
-    logo: { src: "/products/cash-flow-tracker.png", width: 1942, height: 809 },
+    logo: { src: "/products/cash-flow-original.png", width: 1254, height: 1254 },
+    background: "/products/cash-flow-water.webp",
     theme: "cashflow",
   },
 ];
