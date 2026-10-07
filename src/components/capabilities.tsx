@@ -8,7 +8,7 @@ export function Capabilities() {
   return (
     <section id="capabilities" className="section capabilities" aria-labelledby="capabilities-heading">
       <div className="container">
-        <SectionHeading label="Capabilities" title="A clearer path to better results." id="capabilities-heading" />
+        <SectionHeading label="App Description" title="A clearer path to better results." id="capabilities-heading" />
         <div className="capability-grid">
           {capabilities.map((capability, index) => {
             const Icon = capabilityIcons[index];

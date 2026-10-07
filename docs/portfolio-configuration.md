@@ -16,6 +16,8 @@ Contact's Message Us icon opens an accessible message window to Christopher@godz
 
 Mobile navigation floats below a constant-height header. Section anchor offsets follow the header height, so closing the menu cannot shift or hide the destination heading. Long sections retain normal page scrolling.
 
+Desktop/mobile navigation and matching section labels are Apps, App Description, Tech Stack and Contact Us. The existing destinations remain #work, #capabilities, #technology and #contact. The owner's next task is a copy-only rewrite; context, locked brand wording and preservation rules are in docs/claude-code-copy-handoff.md.
+
 The original animation autoplays muted in an inline loop with no on-page playback controls. The operating system's reduced-motion preference is respected. GODZ-i's original logo and both animation files remain unchanged.
 
 Production checks use the normal build, TypeScript and scoped ESLint. The separate supplied project archives and temporary review artifacts are excluded from scanning and publishing. Full-project lint has pre-existing findings in unused legacy sources.

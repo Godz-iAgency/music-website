@@ -16,7 +16,7 @@ export function Contact() {
     <section id="contact" className="section contact" aria-labelledby="contact-heading">
       <div className="container contact-layout">
         <div>
-          <p className="eyebrow">Contact</p>
+          <p className="eyebrow">Contact Us</p>
           <h2 id="contact-heading">Bring your next<br />app to life.</h2>
           <a className="contact-address" href={`mailto:${recipient}`}>{recipient}</a>
         </div>

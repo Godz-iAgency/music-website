@@ -9,11 +9,11 @@ export function Navigation({ showTeam = false }: { showTeam?: boolean }) {
   const menuButton = useRef<HTMLButtonElement>(null);
   const header = useRef<HTMLElement>(null);
   const links = [
-    { label: "Work", href: "#work" },
-    { label: "Capabilities", href: "#capabilities" },
-    { label: "Technology", href: "#technology" },
+    { label: "Apps", href: "#work" },
+    { label: "App Description", href: "#capabilities" },
+    { label: "Tech Stack", href: "#technology" },
     ...(showTeam ? [{ label: "Team", href: "#team" }] : []),
-    { label: "Contact", href: "#contact" },
+    { label: "Contact Us", href: "#contact" },
   ];
 
   useEffect(() => {
@@ -52,7 +52,7 @@ export function Navigation({ showTeam = false }: { showTeam?: boolean }) {
           <Image src="/godzi_logo_horizontal.png" alt="GODZ-i" width={1024} height={307} className="nav-logo" preload />
         </a>
         <nav aria-label="Main navigation" className="desktop-nav">
-          {links.map((link) => <a key={link.href} href={link.href} className={link.label === "Contact" ? "nav-contact" : undefined}>{link.label}{link.label === "Contact" && <ArrowUpRight size={14} aria-hidden="true" />}</a>)}
+          {links.map((link) => <a key={link.href} href={link.href} className={link.href === "#contact" ? "nav-contact" : undefined}>{link.label}{link.href === "#contact" && <ArrowUpRight size={14} aria-hidden="true" />}</a>)}
         </nav>
         <button ref={menuButton} type="button" className="menu-button" aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
           aria-expanded={mobileOpen} aria-controls="mobile-navigation" onClick={() => setMobileOpen(!mobileOpen)}>

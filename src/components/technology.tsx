@@ -6,7 +6,7 @@ export function Technology() {
   return (
     <section id="technology" className="section technology" aria-labelledby="technology-heading">
       <div className="container">
-        <SectionHeading label="Technology" title="Launch with a solid foundation." id="technology-heading" />
+        <SectionHeading label="Tech Stack" title="Launch with a solid foundation." id="technology-heading" />
         <ul className="technology-grid">
           {technologies.map((technology) => (
             <li key={technology.name} className="technology-item">
