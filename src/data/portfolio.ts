@@ -41,8 +41,8 @@ export const products: readonly Product[] = [
   },
   {
     id: "six-plants", name: "Six Plants", category: "Health + Personalization",
-    headline: "Healthy eating made simpler.",
-    description: "Get a 7-day recipe plan and grocery list.",
+    headline: "Healthy Eating Made Simple",
+    description: "Get a 7-day meal plan with recipe and grocery list",
     capability: "Personalized consumer health, recommendation systems and structured planning tools.",
     features: ["Six plant-food categories", "Personalized selections", "7-day planning", "Recipes", "Grocery lists"],
     url: "https://www.gbombs.app/",

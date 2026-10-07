@@ -24,12 +24,12 @@ The owner has just approved the four card headings below. They are locked brand 
 | --- | --- | --- | --- |
 | Bookworm AI | Making every book smarter. | Turn any book into a 7-day course. | https://bookworm-ai.app/ |
 | SplitMic | Music Industry Connected. | Connecting bands, venues, talent buyers, record labels and festivals on the same platform. | https://www.splitmic.com/ |
-| Six Plants | Healthy eating made simpler. | Get a 7-day recipe plan and grocery list. | https://www.gbombs.app/ |
+| Six Plants | Healthy Eating Made Simple | Get a 7-day meal plan with recipe and grocery list | https://www.gbombs.app/ |
 | Cash Flow Tracker | Every dollar counts. | See income, expenses and account balances in one place. | https://cash-flow-tracker-godz-i.vercel.app/ |
 
 - **Bookworm AI:** turns books into structured seven-day learning experiences. Supplied product context includes AI-generated courses, multiple reading levels, an AI book assistant, flashcards, multilingual learning and book clubs. Its existing poster says "Making every book smarter." Keep the product text consistent with that artwork.
 - **SplitMic:** one music-industry platform connecting bands, venues, talent buyers, record labels and festivals. Supplied broader context also includes backline companies, instrument rental, rehearsal studios and live-show discovery. Keep the owner's five principal audience groups in the card description. Do not reduce it to only bands and venues or replace the slogan with a new music-connection headline.
-- **Six Plants:** personalized healthy-eating planning around six plant-food categories, selected foods, a seven-day plan, recipes and grocery lists. Describe practical meal planning; do not claim medical treatment or guaranteed health results. The owner specifically chose "simpler," not "simple."
+- **Six Plants:** personalized healthy-eating planning around six plant-food categories, selected foods, a seven-day meal plan, recipes and grocery lists. Describe practical meal planning; do not claim medical treatment or guaranteed health results. The owner's latest correction replaces the earlier "simpler" wording with the exact heading "Healthy Eating Made Simple" and the subtext shown above.
 - **Cash Flow Tracker:** brings income, expenses and account balances into one view. Supplied context includes account allocation, transfers, personal/business classification and cash-flow visibility. Do not promise financial returns, bank integrations or automation without verified support. The owner corrected "Follow the money" to "Every dollar counts."
 
 ## What Codex has already changed
