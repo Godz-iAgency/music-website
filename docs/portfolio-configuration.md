@@ -4,6 +4,8 @@ The existing Next.js 16 application remains connected to Godz-iAgency/music-webs
 
 Content and the four app URLs live in src/data/portfolio.ts. The eleven technologies include Claude Design. Team stays hidden until supplied staff information is added.
 
+Marketing headings lead with user outcomes. Product headlines describe the benefit; original slogans remain in their descriptions or original artwork. Capability entries retain their category names as identifiers and expose a separate outcome headline. Keep the hero, metadata description and social-preview copy aligned when editing messaging. Avoid unsupported guarantees, invented metrics or claims about product results.
+
 The palette remains dark with the GODZ-i orange accent. Typography uses native Apple system fonts on Apple devices, Segoe UI Variable/Segoe UI on Windows and platform fallbacks. Display headings have size-specific tracking and stronger weights; readable body text, labels and 16px form controls avoid tiny text and automatic input zoom.
 
 Original Bookworm, SplitMic and Six Plants artwork is hosted in public/products. Cash Flow Tracker uses the owner's original 1254px square green/gold mark and the supplied water background, copied without edits. The former generated logo was replaced. Its visual stage uses a dark overlay for legible captions and an intact framed mark.

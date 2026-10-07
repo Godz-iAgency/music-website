@@ -17,7 +17,7 @@ export function Contact() {
       <div className="container contact-layout">
         <div>
           <p className="eyebrow">Contact</p>
-          <h2 id="contact-heading">Let&apos;s build<br />something useful.</h2>
+          <h2 id="contact-heading">Bring your next<br />app to life.</h2>
           <a className="contact-address" href={`mailto:${recipient}`}>{recipient}</a>
         </div>
         <button type="button" className="message-button" onClick={() => dialogRef.current?.showModal()} aria-haspopup="dialog" aria-label="Message Us">
@@ -30,7 +30,7 @@ export function Contact() {
         <div className="dialog-content">
           <button type="button" className="dialog-close" onClick={() => dialogRef.current?.close()} aria-label="Close message window"><X size={21} aria-hidden="true" /></button>
           <p className="eyebrow">Message GODZ-i</p>
-          <h2 id="contact-dialog-heading">Write your message.</h2>
+          <h2 id="contact-dialog-heading">Move your idea forward.</h2>
           <p className="compose-recipient">{recipient}</p>
           <div className="contact-form">
             <div><label htmlFor="contact-subject">Subject</label><input id="contact-subject" value={subject} onChange={(event) => setSubject(event.target.value)} maxLength={200} autoFocus /></div>

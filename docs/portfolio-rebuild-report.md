@@ -2,7 +2,7 @@
 
 The existing layout and dark/orange theme are preserved. The typography audit identified small labels, light heading weights and aggressive negative tracking. The refinement replaces Montserrat presentation with native system typography, clearer heading weights, readable body/utility text and consistent stroke weights for functional icons. Capabilities have simple purpose-specific outline icons and technology marks have restrained dark frames.
 
-The homepage headline is now **Make room for what matters.** Its supporting copy connects the apps' shared purpose: **Learn more. Connect better. Live healthier. Move forward with clarity.** The social preview uses the new headline too.
+The homepage headline is now **More progress. Less friction.** Its supporting copy leads with practical outcomes: putting learning to work, finding people, eating well with a plan and understanding where money goes. Section and capability headings now describe the visitor's payoff rather than the agency's process. Product headings lead with learning, music connections, easier healthy eating and clearer finances. Original brand slogans remain visible in the product descriptions and supplied artwork. Contact invites visitors to bring their next app to life. The search description and social preview use the same outcome-led language. Product and technology names stay intact.
 
 ## Navigation
 

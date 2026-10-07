@@ -17,8 +17,8 @@ export type Product = {
 export const products: readonly Product[] = [
   {
     id: "bookworm", name: "Bookworm AI", category: "AI + Education",
-    headline: "Turn any book into a 7-day course.",
-    description: "Learn the ideas that matter. One day at a time.",
+    headline: "Put what you read to work.",
+    description: "Build a deeper understanding of your books with a 7-day course, an AI assistant and flashcards.",
     capability: "AI-powered education and personalized learning systems.",
     features: ["AI-generated courses", "Multiple reading levels", "AI book assistant", "Flashcards", "Multilingual learning", "Book clubs"],
     url: "https://bookworm-ai.app/",
@@ -28,8 +28,8 @@ export const products: readonly Product[] = [
   },
   {
     id: "splitmic", name: "SplitMic", category: "Marketplace + Network",
-    headline: "Music Industry Connected.",
-    description: "Bands, venues and the people who make live music happen.",
+    headline: "Find your next music connection.",
+    description: "Music Industry Connected. Discover bands, venues and the people who can help bring your next show to life.",
     capability: "Multi-sided marketplaces, professional networks and discovery systems.",
     features: ["Bands", "Venues", "Talent buyers", "Record labels", "Festivals", "Backline companies", "Instrument rental", "Rehearsal studios", "Live-show discovery"],
     url: "https://www.splitmic.com/",
@@ -38,8 +38,8 @@ export const products: readonly Product[] = [
   },
   {
     id: "six-plants", name: "Six Plants", category: "Health + Personalization",
-    headline: "Healthy eating made simple.",
-    description: "Choose your plants. Get your plan.",
+    headline: "Make healthy eating easier.",
+    description: "Healthy eating made simple. Get a 7-day plan, recipes and a grocery list around the plants you choose.",
     capability: "Personalized consumer health, recommendation systems and structured planning tools.",
     features: ["Six plant-food categories", "Personalized selections", "7-day planning", "Recipes", "Grocery lists"],
     url: "https://www.gbombs.app/",
@@ -49,8 +49,8 @@ export const products: readonly Product[] = [
   },
   {
     id: "cash-flow-tracker", name: "Cash Flow Tracker", category: "Finance + Data",
-    headline: "Every dollar counts.",
-    description: "Income. Expenses. Accounts. One clear view.",
+    headline: "Know where your money goes.",
+    description: "Every dollar counts. See income, expenses and account balances together, so your next decision is clearer.",
     capability: "Financial workflows, structured data, account allocation and business intelligence interfaces.",
     features: ["Income tracking", "Expense tracking", "Account balances", "Account allocation", "Transfers", "Personal vs. business classification", "Cash-flow visibility"],
     url: "https://cash-flow-tracker-godz-i.vercel.app/",
@@ -61,10 +61,10 @@ export const products: readonly Product[] = [
 ];
 
 export const capabilities = [
-  { name: "AI + Education", description: "Personalized learning systems powered by AI." },
-  { name: "Marketplace + Network", description: "Platforms that connect people, businesses and services." },
-  { name: "Health + Personalization", description: "Consumer applications built around individual needs." },
-  { name: "Finance + Data", description: "Systems that turn financial activity into clear information." },
+  { name: "AI + Education", headline: "Make learning stick.", description: "Turn complex ideas into daily lessons people can understand and put into practice." },
+  { name: "Marketplace + Network", headline: "Find the right people.", description: "Bring discovery and conversations into one place, so people can move from searching to working together." },
+  { name: "Health + Personalization", headline: "Eat well with a plan.", description: "Turn food preferences into practical meal plans, recipes and grocery lists." },
+  { name: "Finance + Data", headline: "Make money decisions clearer.", description: "Bring income, spending and balances into one view, so people can see where they stand." },
 ] as const;
 
 export const technologies = [

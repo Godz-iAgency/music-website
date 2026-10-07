@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const title = "GODZ-i Agency | Software & AI Applications";
-const description = "GODZ-i Agency builds production-ready software and AI-powered applications.";
+const description = "Put what you learn to work. Find your people. Eat well with a plan. Know where your money goes. Explore apps built by GODZ-i Agency.";
 
 export const viewport: Viewport = {
   themeColor: "#050507",
