@@ -109,10 +109,16 @@ h2 { font-size: clamp(2rem, 3.6vw, 3.2rem); font-weight: 600; letter-spacing: -.
 .capabilities { background: #08080d; }
 .capabilities .section-heading h2 { max-width: 620px; }
 .capability-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; }
-.capability { border-top: 1px solid #ffffff26; padding-top: 1rem; }
-.capability-number { display: block; color: var(--muted); font-size: .6875rem; margin-bottom: 2rem; font-variant-numeric: tabular-nums; }
+.capability { position: relative; isolation: isolate; overflow: hidden; min-width: 0; border: 1px solid #ffffff1c; border-radius: 18px; padding: 1.25rem; background: #0c0c12; box-shadow: inset 0 1px 0 #ffffff05; }
+.capability-background { z-index: -2; object-fit: cover; }
+.capability::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(115deg, #08080de0 0%, #08080db8 65%, #08080d70 100%); }
+.capability-bookworm { --capability-accent: #6bdbef; }
+.capability-splitmic { --capability-accent: #ff995e; }
+.capability-plants { --capability-accent: #b8df85; }
+.capability-cashflow { --capability-accent: #e6d176; }
+.capability-number { display: block; color: #d0d0d8; font-size: .75rem; font-variant-numeric: tabular-nums; }
 .capability h3 { font-size: 1.0625rem; font-weight: 600; letter-spacing: -.015em; line-height: 1.35; margin-bottom: .75rem; }
-.capability p { color: var(--muted); font-size: .9375rem; line-height: 1.65; max-width: 27ch; }
+.capability p { color: #d0d0d8; font-size: .9375rem; line-height: 1.65; max-width: 27ch; }
 .technology-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 2rem; row-gap: 2.5rem; list-style: none; margin: 0; padding: 1rem 0 0; }
 .technology-item { display: flex; align-items: flex-start; gap: .8rem; min-width: 0; }
 .technology-logo { width: 36px; height: 36px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 4px; border: 1px solid #ffffff12; background: #ffffff03; border-radius: 10px; }
@@ -216,7 +222,7 @@ body:has(.contact-dialog[open]) { overflow: hidden; }
   .technology-item h3 { font-size: .8125rem; }
   .technology-item p { font-size: .6875rem; }
   .capability-grid { gap: 2rem 1.25rem; }
-  .capability-number { margin-bottom: 1.2rem; }
+  .capability { padding: 1rem; }
   .capability h3 { font-size: 1rem; }
   .capability p { font-size: .875rem; }
   .team-grid { grid-template-columns: 1fr; }
@@ -251,6 +257,7 @@ body:has(.contact-dialog[open]) { overflow: hidden; }
   :root { --muted: #d4d4d8; --line: #71717a; }
   .site-header, .mobile-nav { background: #101012; backdrop-filter: none; }
 }
-.capability-symbol { display: flex; align-items: center; justify-content: space-between; min-height: 36px; margin-bottom: 1.75rem; color: #c4c4cc; }
-.capability-symbol .capability-number { margin-bottom: 0; }
+.capability-symbol { display: flex; align-items: center; justify-content: flex-start; gap: .75rem; min-height: 36px; margin-bottom: 1.75rem; color: var(--capability-accent); }
+.capability-symbol svg { flex-shrink: 0; }
+@media (prefers-contrast: more) { .capability::after { background: #08080df2; } .capability { border-color: #71717a; } }
 @media (max-width: 640px) { .capability-symbol { margin-bottom: 1rem; } }

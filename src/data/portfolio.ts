@@ -64,10 +64,10 @@ export const products: readonly Product[] = [
 ];
 
 export const capabilities = [
-  { name: "AI + Education", headline: "Make learning stick.", description: "Turn complex ideas into daily lessons people can understand and put into practice." },
-  { name: "Marketplace + Network", headline: "Find the right people.", description: "Bring discovery and conversations into one place, so people can move from searching to working together." },
-  { name: "Health + Personalization", headline: "Eat well with a plan.", description: "Turn food preferences into practical meal plans, recipes and grocery lists." },
-  { name: "Finance + Data", headline: "Make money decisions clearer.", description: "Bring income, spending and balances into one view, so people can see where they stand." },
+  { name: "AI + Education", headline: "Make learning stick.", description: "Turn complex ideas into daily lessons people can understand and put into practice.", theme: "bookworm", background: "/descriptions/bookworm.png" },
+  { name: "Marketplace + Network", headline: "Find the right people.", description: "Bring discovery and conversations into one place, so people can move from searching to working together.", theme: "splitmic", background: "/descriptions/splitmic.png" },
+  { name: "Health + Personalization", headline: "Eat well with a plan.", description: "Turn food preferences into practical meal plans, recipes and grocery lists.", theme: "plants", background: "/descriptions/plants.png" },
+  { name: "Finance + Data", headline: "Make money decisions clearer.", description: "Bring income, spending and balances into one view, so people can see where they stand.", theme: "cashflow", background: "/descriptions/cashflow.png" },
 ] as const;
 
 export const technologies = [
@@ -80,6 +80,7 @@ export const technologies = [
   { name: "Vercel", category: "Infrastructure + Deployment", logo: "/technology/vercel.svg" },
   { name: "Stripe", category: "Payments", logo: "/technology/stripe.svg" },
   { name: "Google Workspace", category: "Productivity + Workflow", logo: "/technology/google.svg" },
+  { name: "Resend", category: "Email Sending", logo: "/technology/resend.svg" },
   { name: "Higgsfield", category: "Creative AI", logo: "/technology/higgsfield.png" },
   { name: "Google Vids", category: "Video + Communication", logo: "/technology/google-vids.png" },
 ] as const;
