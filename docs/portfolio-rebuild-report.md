@@ -24,7 +24,7 @@ Resend is the twelfth Tech Stack entry, labeled Email Sending, immediately after
 
 ## Animation and scope
 
-The video loops automatically with no visible play/pause control. Reduced-motion preference handling remains. Both original media files are unchanged:
+The video loops automatically with no visible play/pause control. A smaller 640px H.264 baseline derivative is now the first source for phone compatibility, with media-readiness, page-return and interaction recovery plus bounded source fallback. A frame from the original animation is the poster. Reduced-motion preference handling remains. Details and playback verification are in docs/mobile-animation-fix.md. Both original media files are unchanged:
 
 - godzi-intro.webm SHA-256: 3AEE3A80D864FA86E47871F5739EB38E44D5AF68A68AA33A1DB65B57F4C73E71
 - godzi-intro.mp4 SHA-256: A846E80602C317615BCE518B85398C20F868BA43D63CCE128E6A6249D2021D6D
