@@ -8,6 +8,7 @@ export type Product = {
   features: readonly string[];
   url: string | null;
   logo: { src: string; width: number; height: number } | null;
+  nameLogo?: { src: string; width: number; height: number };
   artwork?: { src: string; width: number; height: number; alt: string };
   background?: string;
   theme: "bookworm" | "splitmic" | "plants" | "cashflow";
@@ -22,7 +23,7 @@ export const products: readonly Product[] = [
     capability: "AI-powered education and personalized learning systems.",
     features: ["AI-generated courses", "Multiple reading levels", "AI book assistant", "Flashcards", "Multilingual learning", "Book clubs"],
     url: "https://bookworm-ai.app/",
-    logo: { src: "/products/bookworm-ai.png", width: 1024, height: 1024 },
+    logo: { src: "/products/bookworm-original-mark.png", width: 1254, height: 1254 },
     artwork: { src: "/products/bookworm-poster.png", width: 1080, height: 1350, alt: "Bookworm AI. Making every book smarter. Turn your favorite book into a 7-day learning experience." },
     theme: "bookworm",
   },
@@ -34,6 +35,7 @@ export const products: readonly Product[] = [
     features: ["Bands", "Venues", "Talent buyers", "Record labels", "Festivals", "Backline companies", "Instrument rental", "Rehearsal studios", "Live-show discovery"],
     url: "https://www.splitmic.com/",
     logo: { src: "/products/splitmic.png", width: 1024, height: 1024 },
+    nameLogo: { src: "/products/splitmic-mark.png", width: 1024, height: 1024 },
     theme: "splitmic",
   },
   {

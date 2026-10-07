@@ -1,5 +1,5 @@
 {
-  "name": "GODZ-i Agency",
+  "name": "GODZ-i",
   "short_name": "GODZ-i",
   "icons": [
     {
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "description": "GODZ-i Agency builds production-ready software and AI-powered applications.",
+  "description": "GODZ-i builds AI apps for work and life: book learning, music networks, meal planning and cash flow tracking.",
   "start_url": "/",
   "theme_color": "#050507",
   "background_color": "#050507",

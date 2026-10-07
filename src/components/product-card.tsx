@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import type { Product } from "@/data/portfolio";
 
 export function ProductCard({ product, index }: { product: Product; index: number }) {
+  const nameLogo = product.nameLogo ?? product.logo;
   const content = (
     <>
       <div className={`product-visual product-visual-${product.theme}`}>
@@ -23,7 +24,7 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
       </div>
       <div className="product-copy">
         <p className="product-name">
-          {product.artwork && product.logo && <Image src={product.logo.src} alt="" width={36} height={36} className="product-small-logo" />}
+          {nameLogo && <Image src={nameLogo.src} alt="" width={nameLogo.width} height={nameLogo.height} sizes="32px" className="product-small-logo" />}
           {product.name}
         </p>
         <h3>{product.headline}</h3>

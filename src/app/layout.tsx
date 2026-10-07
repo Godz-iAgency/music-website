@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const title = "GODZ-i Agency | Software & AI Applications";
-const description = "Put what you learn to work. Find your people. Eat well with a plan. Know where your money goes. Explore apps built by GODZ-i Agency.";
+const title = "GODZ-i | Software & AI Applications";
+const description = "GODZ-i builds AI apps for work and life. Learn book ideas, find bands and venues, plan healthy meals, and see your income and spending in one place.";
 
 export const viewport: Viewport = {
   themeColor: "#050507",
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     title,
     description,
     type: "website",
-    siteName: "GODZ-i Agency",
+    siteName: "GODZ-i",
     locale: "en_US",
     url: "/",
   },
   twitter: { card: "summary_large_image", title, description },
   appleWebApp: {
     capable: true,
-    title: "GODZ-i Agency",
+    title: "GODZ-i",
     statusBarStyle: "black-translucent",
   },
 };

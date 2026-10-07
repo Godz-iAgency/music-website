@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "GODZ-i Agency. More progress. Less friction. Better learning. Stronger connections. Healthier meals. Clearer finances.";
+export const alt = "GODZ-i. We build AI apps for work and life. Learn book ideas, find bands and venues, plan healthy meals, and see your income and spending in one place.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -16,9 +16,9 @@ export default async function SocialImage() {
         <img src={`data:image/png;base64,${logo.toString("base64")}`} width={202} height={61} alt="GODZ-i" />
       </div>
       <div style={{ display: "flex", flexDirection: "column", marginTop: 64, fontSize: 76, fontWeight: 600, lineHeight: 1.08, letterSpacing: "-3px" }}>
-        <span>More progress.</span><span style={{ color: "#bfc0c7" }}>Less friction.</span>
+        <span>We build AI apps</span><span style={{ color: "#bfc0c7" }}>for work and life.</span>
       </div>
-      <div style={{ display: "flex", fontSize: 25, color: "#bfc0c7", marginTop: 32 }}>Better learning. Stronger connections. Healthier meals. Clearer finances.</div>
+      <div style={{ display: "flex", fontSize: 25, color: "#bfc0c7", marginTop: 32 }}>Learn book ideas. Find bands and venues. Plan healthy meals. Track income and spending.</div>
       <div style={{ display: "flex", position: "absolute", bottom: 54, right: 80, color: "#e8430a", fontSize: 20 }}>godz-iagency.com</div>
     </div>,
     size,
