@@ -17,8 +17,9 @@ export function Contact() {
       <div className="container contact-layout">
         <div>
           <p className="eyebrow">Contact Us</p>
-          <h2 id="contact-heading">Bring your next<br />app to life.</h2>
+          <h2 id="contact-heading">Need an app built?<br />Want to partner?</h2>
           <a className="contact-address" href={`mailto:${recipient}`}>{recipient}</a>
+          <a className="contact-call" href="https://cal.com/christopher-downer-6pkxir/strategy-session" target="_blank" rel="noopener noreferrer">Book a Discovery Call <ArrowUpRight size={17} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
         </div>
         <button type="button" className="message-button" onClick={() => dialogRef.current?.showModal()} aria-haspopup="dialog" aria-label="Message Us">
           <MessageCircleMore size={28} strokeWidth={1.6} aria-hidden="true" />
@@ -30,7 +31,7 @@ export function Contact() {
         <div className="dialog-content">
           <button type="button" className="dialog-close" onClick={() => dialogRef.current?.close()} aria-label="Close message window"><X size={21} aria-hidden="true" /></button>
           <p className="eyebrow">Message GODZ-i</p>
-          <h2 id="contact-dialog-heading">Move your idea forward.</h2>
+          <h2 id="contact-dialog-heading">What do you want to build?</h2>
           <p className="compose-recipient">{recipient}</p>
           <div className="contact-form">
             <div><label htmlFor="contact-subject">Subject</label><input id="contact-subject" value={subject} onChange={(event) => setSubject(event.target.value)} maxLength={200} autoFocus /></div>

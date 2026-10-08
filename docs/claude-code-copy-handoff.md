@@ -47,6 +47,20 @@ The owner has just approved the four card headings below. They are locked brand 
 11. In a subsequent owner-requested visual update, moved each App Description number to the left of its icon and added four generated wallpapers matching the apps' brand palettes. They are hosted in public/descriptions with prompts in docs/description-wallpaper-prompts.md. Dark overlays maintain readability. Preserve these cards, image elements and responsive styles during the copy-only task.
 12. Fixed mobile hero compatibility by adding a smaller H.264 baseline MP4 as the first source and a matching animation-frame poster. Both original videos remain untouched. Playback now retries on media readiness, page return and interaction, with bounded source fallback and proper listener cleanup. Reduced-motion preference remains respected and no visible playback controls were added. Preserve the entire hero-animation.tsx implementation and the new assets during the copy-only task. Context and verification are in docs/mobile-animation-fix.md. Physical-phone settings cannot be inspected from this workspace; do not claim a direct physical-device test.
 
+## Claude Code copy and polish pass (2026-10-07)
+
+Owner-approved hybrid positioning: a portfolio of live apps, a place to open them, and an invitation to have GODZ-i build or partner. Copy avoids app counts so new apps can be added without rewriting section titles.
+
+- Hero: "Use our apps. Or have us build yours." Paragraph lists outcomes (7-day course, week of meals, track every dollar, find the people your next show needs) and ends with the build offer. Buttons: "See the Apps" (#work) and "Book a Call" (opens https://cal.com/christopher-downer-6pkxir/strategy-session in a new tab; owner-requested).
+- Apps: "Every app here is live." / "Pick the problem you have. Open the app that solves it." Product cards and "View Live App" unchanged.
+- App Description title: "The problem each app solves." Cards are problem-first: "Finish the book. Keep what's in it." / "Stop chasing the people your show needs." / "Stop wondering what's for dinner." / "Stop guessing where it went." with short factual descriptions.
+- Tech Stack title: "What powers every app."
+- Contact: "Need an app built? Want to partner?" plus an owner-requested "Book a Discovery Call" link (new `.contact-call` style) under the email. Dialog heading: "What do you want to build?"
+- Metadata and manifest: "GODZ-i | Use Our Apps or Have Us Build Yours" with an outcome-list description. "AI" was dropped from site-wide claims because only Bookworm AI is verified as AI.
+- Owner-approved premium polish in globals.css (appended block, no layout change): soft orange glow behind the hero, orange section eyebrows, accent glow on the primary button hover, hover lift and accent border on product and App Description cards (hover-capable devices only, disabled under reduced motion).
+- Not changed: src/app/opengraph-image.tsx still renders the previous "We build AI apps for work and life." headline because this handoff excludes the image generator. Update it in a separate approved pass so social previews match.
+- The calendar CTA says "call", not "in person". Confirm the meeting format before claiming it.
+
 ## Preservation rules
 
 - Text-only edits. Keep the layout, component structure, order, containers, grids, spacing, dimensions, breakpoints, colors, fonts, motion, icons and interactions exactly as approved. Fit copy into the existing design; shorten copy if needed rather than adjusting CSS.

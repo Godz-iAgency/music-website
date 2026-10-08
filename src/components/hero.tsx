@@ -6,11 +6,11 @@ export function Hero() {
     <section id="hero" className="hero" aria-labelledby="hero-heading">
       <div className="container hero-layout">
         <div className="hero-copy">
-          <h1 id="hero-heading">We build AI apps <span>for work and life.</span></h1>
-          <p className="hero-description">Learn the key ideas in your books. Find bands and venues for your next show. Plan a week of healthy meals. See your income and spending in one place.</p>
+          <h1 id="hero-heading">Use our apps. <span>Or have us build yours.</span></h1>
+          <p className="hero-description">Turn a book into a 7-day course. Plan a week of meals. Track every dollar. Find the people your next show needs. We built them all. Use one, or book a call and we&apos;ll build yours.</p>
           <div className="hero-actions">
-            <a href="#work" className="button button-accent">Explore the Apps <ArrowDown size={17} aria-hidden="true" /></a>
-            <a href="#contact" className="hero-contact">Build With Us <ArrowUpRight size={17} aria-hidden="true" /></a>
+            <a href="#work" className="button button-accent">See the Apps <ArrowDown size={17} aria-hidden="true" /></a>
+            <a href="https://cal.com/christopher-downer-6pkxir/strategy-session" className="hero-contact" target="_blank" rel="noopener noreferrer">Book a Call <ArrowUpRight size={17} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
           </div>
         </div>
         <HeroAnimation />

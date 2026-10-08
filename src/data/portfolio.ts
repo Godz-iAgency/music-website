@@ -64,10 +64,10 @@ export const products: readonly Product[] = [
 ];
 
 export const capabilities = [
-  { name: "AI + Education", headline: "Make learning stick.", description: "Turn complex ideas into daily lessons people can understand and put into practice.", theme: "bookworm", background: "/descriptions/bookworm.png" },
-  { name: "Marketplace + Network", headline: "Find the right people.", description: "Bring discovery and conversations into one place, so people can move from searching to working together.", theme: "splitmic", background: "/descriptions/splitmic.png" },
-  { name: "Health + Personalization", headline: "Eat well with a plan.", description: "Turn food preferences into practical meal plans, recipes and grocery lists.", theme: "plants", background: "/descriptions/plants.png" },
-  { name: "Finance + Data", headline: "Make money decisions clearer.", description: "Bring income, spending and balances into one view, so people can see where they stand.", theme: "cashflow", background: "/descriptions/cashflow.png" },
+  { name: "AI + Education", headline: "Finish the book. Keep what's in it.", description: "Bookworm AI turns any book into a 7-day course, with flashcards, an AI assistant and your reading level.", theme: "bookworm", background: "/descriptions/bookworm.png" },
+  { name: "Marketplace + Network", headline: "Stop chasing the people your show needs.", description: "Bands, venues, talent buyers, labels and festivals share one platform, with backline and rehearsal studios too.", theme: "splitmic", background: "/descriptions/splitmic.png" },
+  { name: "Health + Personalization", headline: "Stop wondering what's for dinner.", description: "Pick your foods. Get a 7-day meal plan, recipes and a grocery list.", theme: "plants", background: "/descriptions/plants.png" },
+  { name: "Finance + Data", headline: "Stop guessing where it went.", description: "Income, expenses and balances in one view, with personal and business kept separate.", theme: "cashflow", background: "/descriptions/cashflow.png" },
 ] as const;
 
 export const technologies = [
