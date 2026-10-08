@@ -19,7 +19,7 @@ export function Contact() {
           <p className="eyebrow">Contact Us</p>
           <h2 id="contact-heading">Need an app built?<br />Want to partner?</h2>
           <a className="contact-address" href={`mailto:${recipient}`}>{recipient}</a>
-          <a className="contact-call" href="https://cal.com/christopher-downer-6pkxir/strategy-session" target="_blank" rel="noopener noreferrer">Book a Discovery Call <ArrowUpRight size={17} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
+          <a className="contact-call" href="https://cal.com/christopher-downer-6pkxir/strategy-session" target="_blank" rel="noopener noreferrer">Book a Video Discovery Call <ArrowUpRight size={17} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
         </div>
         <button type="button" className="message-button" onClick={() => dialogRef.current?.showModal()} aria-haspopup="dialog" aria-label="Message Us">
           <MessageCircleMore size={28} strokeWidth={1.6} aria-hidden="true" />

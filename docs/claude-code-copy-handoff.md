@@ -51,15 +51,15 @@ The owner has just approved the four card headings below. They are locked brand 
 
 Owner-approved hybrid positioning: a portfolio of live apps, a place to open them, and an invitation to have GODZ-i build or partner. Copy avoids app counts so new apps can be added without rewriting section titles.
 
-- Hero: "Use our apps. Or have us build yours." Paragraph lists outcomes (7-day course, week of meals, track every dollar, find the people your next show needs) and ends with the build offer. Buttons: "See the Apps" (#work) and "Book a Call" (opens https://cal.com/christopher-downer-6pkxir/strategy-session in a new tab; owner-requested).
+- Hero: "Use our apps. Or have us build yours." Paragraph lists outcomes (7-day course, week of meals, track every dollar, find the people your next show needs) and ends with the build offer. Buttons: "See the Apps" (#work) and "Book a Video Call" (opens https://cal.com/christopher-downer-6pkxir/strategy-session in a new tab; owner-requested).
 - Apps: "Every app here is live." / "Pick the problem you have. Open the app that solves it." Product cards and "View Live App" unchanged.
 - App Description title: "The problem each app solves." Cards are problem-first: "Finish the book. Keep what's in it." / "Stop chasing the people your show needs." / "Stop wondering what's for dinner." / "Stop guessing where it went." with short factual descriptions.
 - Tech Stack title: "What powers every app."
-- Contact: "Need an app built? Want to partner?" plus an owner-requested "Book a Discovery Call" link (new `.contact-call` style) under the email. Dialog heading: "What do you want to build?"
+- Contact: "Need an app built? Want to partner?" plus an owner-requested "Book a Video Discovery Call" link (new `.contact-call` style) under the email. Dialog heading: "What do you want to build?"
 - Metadata and manifest: "GODZ-i | Use Our Apps or Have Us Build Yours" with an outcome-list description. "AI" was dropped from site-wide claims because only Bookworm AI is verified as AI.
 - Owner-approved premium polish in globals.css (appended block, no layout change): soft orange glow behind the hero, orange section eyebrows, accent glow on the primary button hover, hover lift and accent border on product and App Description cards (hover-capable devices only, disabled under reduced motion).
 - Social preview (owner-approved follow-up, 2026-10-08): src/app/opengraph-image.tsx now renders "Use our apps. Or have us build yours." with "Turn a book into a 7-day course. Plan a week of meals. Track every dollar." on the site background (#050507) with the same soft orange glow as the hero. Logo and domain line unchanged.
-- The calendar CTA says "call", not "in person". Confirm the meeting format before claiming it.
+- The discovery call is a video call (owner-confirmed 2026-10-08); calendar CTAs say "video call".
 
 ## Preservation rules
 

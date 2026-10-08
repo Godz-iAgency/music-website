@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const title = "GODZ-i | Use Our Apps or Have Us Build Yours";
-const description = "Turn books into 7-day courses, plan a week of meals, track your cash flow, connect with the music industry. Use our apps or book a call to build yours.";
+const description = "Turn books into 7-day courses, plan a week of meals, track your cash flow, connect with the music industry. Use our apps or book a video call to build yours.";
 
 export const viewport: Viewport = {
   themeColor: "#050507",
