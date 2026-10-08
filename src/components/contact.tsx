@@ -17,7 +17,7 @@ export function Contact() {
       <div className="container contact-layout">
         <div>
           <p className="eyebrow">Contact Us</p>
-          <h2 id="contact-heading">Get a free plan<br />for your app.</h2>
+          <h2 id="contact-heading">Get a free plan<br />for your AI app.</h2>
           <p className="contact-offer">A 30 minute video call. No cost, no obligation. You leave with a plan, hire us or not.</p>
           <ol className="contact-steps"><li>Pick a time</li><li>Share your idea</li><li>Get your plan</li></ol>
           <p className="contact-guarantee">Every custom app includes 30 days of free maintenance. Not happy with the final delivery? We keep working for 30 days until it&apos;s right.</p>

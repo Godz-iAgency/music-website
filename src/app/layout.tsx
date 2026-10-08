@@ -11,8 +11,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   ...pageMetadata({
-    title: "GODZ-i | Production-Ready Apps and Custom App Development",
-    description: "Production-ready apps you can use today, and custom apps built for your business. Bookworm AI, SplitMic, Six Plants and Cash Flow Tracker. Austin, Texas.",
+    title: "GODZ-i | AI-Powered Apps and Custom App Development",
+    description: "AI-powered apps you can use today: Bookworm AI, SplitMic, Six Plants, Cash Flow Tracker. Need one built? We build custom AI apps.",
     path: "/",
   }),
   robots: { index: true, follow: true },

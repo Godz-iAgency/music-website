@@ -4,8 +4,8 @@ import { Subpage } from "@/components/subpage";
 import { appPages, products } from "@/data/portfolio";
 import { callUrl, pageMetadata, siteUrl } from "@/lib/site";
 
-const title = "Custom App Development in Austin, Texas | GODZ-i";
-const description = "Custom apps built for your business and kept running. 30 days of free maintenance after delivery. Book a free 30 minute video call.";
+const title = "Custom AI App Development | GODZ-i";
+const description = "Custom AI apps built for your business and kept running. 30 days of free maintenance after delivery. Book a free 30 minute video call.";
 
 export const metadata = pageMetadata({ title, description, path: "/build" });
 
@@ -26,7 +26,7 @@ const data = {
     {
       "@type": "Service", name: "Custom app development", serviceType: "Custom app development",
       description, url: `${siteUrl}/build`, provider: { "@id": `${siteUrl}/#organization` },
-      areaServed: [{ "@type": "City", name: "Austin, Texas" }, { "@type": "Country", name: "United States" }],
+      areaServed: { "@type": "Country", name: "United States" },
     },
     {
       "@type": "BreadcrumbList",
@@ -48,7 +48,7 @@ export default function BuildPage() {
       <section id="hero" className="hero page-hero" aria-labelledby="page-heading">
         <div className="container">
           <p className="eyebrow hero-eyebrow">For companies that need an app built</p>
-          <h1 id="page-heading">Your custom app, <span>built and kept running.</span></h1>
+          <h1 id="page-heading">Your custom AI app, <span>built and kept running.</span></h1>
           <p className="hero-description">Most developers hand over the code and disappear. We stay.</p>
           <div className="hero-actions">
             <CallButton />
@@ -69,7 +69,7 @@ export default function BuildPage() {
           <div className="section-heading">
             <p className="eyebrow">Our method</p>
             <h2 id="method-heading">Built to Run.</h2>
-            <p className="section-description">One team builds it, launches it and keeps it running.</p>
+            <p className="section-description">AI can power any app. We build it in, launch it and keep it running.</p>
           </div>
           <ol className="benefit-grid">
             {method.map((step, index) => (
@@ -86,8 +86,8 @@ export default function BuildPage() {
         <div className="container">
           <div className="section-heading">
             <p className="eyebrow">Proof</p>
-            <h2 id="proof-heading">We run our own apps this way.</h2>
-            <p className="section-description">Open them and judge for yourself.</p>
+            <h2 id="proof-heading">Our apps run on it today.</h2>
+            <p className="section-description">Open one.</p>
           </div>
           <ul className="more-apps-list">
             {appPages.map((entry) => (

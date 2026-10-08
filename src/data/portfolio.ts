@@ -65,7 +65,7 @@ export const products: readonly Product[] = [
 
 // Short card copy on the homepage. Each card opens its app page at /apps/[slug].
 export const capabilities = [
-  { slug: "bookworm-ai", name: "AI + Education", headline: "Readers who forget what they read.", description: "Daily lessons, assignments and flashcards make each book stick.", theme: "bookworm", background: "/descriptions/bookworm.png" },
+  { slug: "bookworm-ai", name: "AI + Education", headline: "Readers who forget what they read.", description: "AI builds the course. Daily lessons, assignments and flashcards make it stick.", theme: "bookworm", background: "/descriptions/bookworm.png" },
   { slug: "splitmic", name: "Marketplace + Network", headline: "Anyone in Austin's music scene.", description: "Search by role, genre or name. Message anyone. Free to join.", theme: "splitmic", background: "/descriptions/splitmic.png" },
   { slug: "six-plants", name: "Health + Personalization", headline: "Home cooks who want to eat healthier.", description: "Pick the plants you like. It builds the meals for you.", theme: "plants", background: "/descriptions/plants.png" },
   { slug: "cash-flow-tracker", name: "Finance + Data", headline: "People who track every dollar.", description: "Every bank account, card and transfer in one private view.", theme: "cashflow", background: "/descriptions/cashflow.png" },

@@ -74,6 +74,10 @@ Owner-approved. This supersedes the earlier hero and section copy above, and the
 - New pages: /build (pain, Built to Run method, proof, guarantee, offer, steps, P.S.) and four app pages with audience-specific copy verified against each live app on 2026-10-08.
 - SEO: sitemap.xml, robots.txt, per-page canonical and social metadata, JSON-LD (Organization, WebSite, ItemList, SoftwareApplication, Service, BreadcrumbList), breadcrumbs, and footer links to every page.
 
+## AI-powered positioning (2026-10-08, latest)
+
+Supersedes the hero copy above. Hero label "AI-powered apps · Custom builds"; headline "AI-powered apps. Use ours, or we build yours."; line "Learn from every book. Eat better. Track every dollar. Book your next show. Open an app, or book a free call to add AI to yours." Apps: "Open one. See the quality." / "Live apps built to solve real problems." Contact: "Get a free plan for your AI app." /build: "Your custom AI app, built and kept running." Austin was removed from all copy except SplitMic, the footer and the Organization address, because only SplitMic is limited to Austin.
+
 ## Preservation rules
 
 - Text-only edits. Keep the layout, component structure, order, containers, grids, spacing, dimensions, breakpoints, colors, fonts, motion, icons and interactions exactly as approved. Fit copy into the existing design; shorten copy if needed rather than adjusting CSS.

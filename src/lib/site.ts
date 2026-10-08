@@ -5,7 +5,7 @@ export const callUrl = "https://cal.com/christopher-downer-6pkxir/strategy-sessi
 export const contactEmail = "Christopher@godz-iagency.com";
 
 // Nested pages do not inherit the root opengraph-image file, so they reference it directly.
-const shareImage = { url: "/opengraph-image", width: 1200, height: 630, alt: "GODZ-i. Production-ready apps. Use ours, or we build yours." };
+const shareImage = { url: "/opengraph-image", width: 1200, height: 630, alt: "GODZ-i. AI-powered apps. Use ours, or we build yours." };
 
 // Every page sets its own canonical and social fields, because nested metadata objects replace the layout's.
 export function pageMetadata({ title, description, path }: { title: string; description: string; path: string }): Metadata {

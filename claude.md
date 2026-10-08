@@ -12,7 +12,7 @@ GODZ-i (pronounced "God's Eye") builds useful apps for work and everyday life. T
 2. Product users: the apps are production ready and live. Users open them from the homepage or their own app page. Never mention paid, subscription or trial on the homepage.
 3. Portfolio as proof: the live apps show companies we can build theirs.
 
-Hero: "Production-ready apps. Use ours, or we build yours." Every section must serve both readers.
+Hero: "AI-powered apps. Use ours, or we build yours." Every section must serve both readers.
 
 Copy follows a condensed Sabri Suby structure (audience callout, big promise, open loop, pain, mechanism, proof, guarantee, free call offer, steps, P.S.), kept short: short card copy up front, full copy one click away.
 
@@ -66,7 +66,9 @@ App audiences (each app page targets one):
 - No dashes used stylistically. No filler. No generic AI-sounding language.
 - Banned vague phrasing: "move forward with clarity", "connect better", "make room for what matters", "make everyday progress easier".
 - Use we, our, us for the company. Never I, me, my.
-- Do not invent pricing, trials, guarantees, testimonials, metrics, purchase flows or unsupported features. Do not call apps "AI" unless verified. Only Bookworm AI is confirmed as AI.
+- Do not invent pricing, trials, guarantees, testimonials, metrics, purchase flows or unsupported features. All our apps are AI-powered (owner-confirmed). Say it once, globally, in the hero; do not repeat it on every card.
+- Austin appears only for SplitMic, which is limited to Austin. Every other app is for anyone; never imply a location limit. Austin stays in the footer and Organization address only.
+- "Production-ready" and "live" are said once each, not repeated. No prices, "paid", subscription or trial wording on the homepage.
 - Cash Flow Tracker: no promises of returns or automatic bank sync. Six Plants: no medical claims.
 - Never double up: a line on the homepage card should not repeat the product card or the app page lead.
 
