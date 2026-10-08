@@ -8,9 +8,11 @@ The GODZ-i website. Next.js 16 / React 19 / Tailwind app deployed on Vercel via 
 
 GODZ-i (pronounced "God's Eye") builds useful apps for work and everyday life. The site is a hybrid:
 
-1. Client funnel (primary, cold social traffic): companies that need an app built. Offer: we build it and maintain it for life. CTA: free 30 minute video call.
-2. Portfolio as proof: the live apps are the credential. "Try the apps, judge for yourself."
-3. Storefront: each app has its own page and links out to the live app. There is no on-site checkout.
+1. Client funnel (primary, cold social traffic): companies that need a custom app built. CTA: free 30 minute video call (the orange button).
+2. Product users: the apps are production ready and live. Users open them from the homepage or their own app page. Never mention paid, subscription or trial on the homepage.
+3. Portfolio as proof: the live apps show companies we can build theirs.
+
+Hero: "Production-ready apps. Use ours, or we build yours." Every section must serve both readers.
 
 Copy follows a condensed Sabri Suby structure (audience callout, big promise, open loop, pain, mechanism, proof, guarantee, free call offer, steps, P.S.), kept short: short card copy up front, full copy one click away.
 
@@ -42,8 +44,8 @@ App audiences (each app page targets one):
 ## CALLS TO ACTION
 
 - Discovery call (a video call, 30 minutes): https://cal.com/christopher-downer-6pkxir/strategy-session
-- Current labels: "Book a Free Call" (hero and pages), "Pick a Time" (Contact). The call is free with no obligation; the visitor leaves with a plan either way.
-- Guarantee (owner-confirmed): we maintain every app we build for life and fix what breaks. Not satisfied after launch: we work 30 more days free until we hit the agreed result. Do not add other guarantees, scarcity or pricing.
+- Current labels: "Book a Free Call" (hero and pages, orange), "Our Apps" (hero, secondary), "Pick a Time" (Contact). The call is free with no obligation; the visitor leaves with a plan either way.
+- Guarantee (owner-confirmed, custom builds only, never the owner's own apps): every custom app includes 30 days of free maintenance after delivery. Not happy with the final delivery: we keep working for 30 days until it's right. After that, ongoing maintenance is an available service. NEVER say "for life", "forever" or "lifetime". Do not add other guarantees, scarcity or pricing.
 - Message Us opens a Gmail or email-app draft. The visitor presses Send in their composer. No backend email service.
 - Product cards say "View Live App". Do not say "Buy", "Get", or imply a purchase flow until one exists.
 

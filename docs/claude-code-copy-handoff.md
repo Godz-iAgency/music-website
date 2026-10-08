@@ -65,12 +65,13 @@ Owner-approved hybrid positioning: a portfolio of live apps, a place to open the
 
 Owner-approved. This supersedes the earlier hero and section copy above, and the "no new routes" rule below: the owner asked for app pages, clickable cards and full SEO. CLAUDE.md holds the current rules.
 
-- Positioning: cold social traffic from companies is the primary reader. The offer is "We build your app. Then maintain it for life." The live apps are the proof.
-- Homepage: hero eyebrow "App development · Austin, Texas"; headline "We build your app. Then maintain it for life."; open loop "Skip the pitch. Try the apps we built, then book a free video call and leave with a plan for yours."; buttons "Book a Free Call" (primary, cal.com) and "Try the Apps" (#work).
-- Apps: "Judge us by what we ship." / "Every app is live. Open one and see for yourself."
+- Positioning (revised same day): the page serves companies that want a custom app and people who want to use the production-ready apps. No pricing language on the homepage.
+- Homepage: eyebrow "Live apps · Custom builds · Austin, Texas"; headline "Production-ready apps. Use ours, or we build yours."; line "Every app is live. Open one now, or book a free video call and leave with a plan for yours."; buttons "Book a Free Call" (orange, cal.com) and "Our Apps" (#work).
+- Apps: "Production-ready. Open one today." / "Pick the app that fits your life or work."
+- Guarantee, custom builds only: 30 days of free maintenance after delivery; if the client is not happy with the final delivery, 30 more days of work until it's right; ongoing maintenance available after. "For life" wording was removed everywhere.
 - App Description: "Who each app is for." Cards call out each audience in a few words and link to /apps/[slug] ("See how it works").
 - Contact: free call offer, three steps (Pick a time, Share your idea, Get your plan), the 30-day guarantee, a "Pick a Time" link, a link to /build, and the email. Message Us is unchanged.
-- New pages: /build (pain, Built for Life method, proof, guarantee, offer, steps, P.S.) and four app pages with audience-specific copy verified against each live app on 2026-10-08.
+- New pages: /build (pain, Built to Run method, proof, guarantee, offer, steps, P.S.) and four app pages with audience-specific copy verified against each live app on 2026-10-08.
 - SEO: sitemap.xml, robots.txt, per-page canonical and social metadata, JSON-LD (Organization, WebSite, ItemList, SoftwareApplication, Service, BreadcrumbList), breadcrumbs, and footer links to every page.
 
 ## Preservation rules

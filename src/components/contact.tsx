@@ -20,7 +20,7 @@ export function Contact() {
           <h2 id="contact-heading">Get a free plan<br />for your app.</h2>
           <p className="contact-offer">A 30 minute video call. No cost, no obligation. You leave with a plan, hire us or not.</p>
           <ol className="contact-steps"><li>Pick a time</li><li>Share your idea</li><li>Get your plan</li></ol>
-          <p className="contact-guarantee">Not satisfied after launch? We work 30 more days free until we hit the result we agreed on.</p>
+          <p className="contact-guarantee">Every custom app includes 30 days of free maintenance. Not happy with the final delivery? We keep working for 30 days until it&apos;s right.</p>
           <a className="contact-call" href={callUrl} target="_blank" rel="noopener noreferrer">Pick a Time <ArrowUpRight size={17} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
           <Link className="contact-address" href="/build">How we build and maintain your app</Link>
           <a className="contact-address" href={`mailto:${recipient}`}>{recipient}</a>

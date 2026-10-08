@@ -84,7 +84,7 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
           <div>
             <p className="eyebrow">Built by GODZ-i</p>
             <h2 id="build-heading">Want an app like this?</h2>
-            <p className="section-description">We build it, then maintain it for life. Start with a free video call.</p>
+            <p className="section-description">We build it and keep it running. Start with a free video call.</p>
           </div>
           <div className="hero-actions">
             <a href={callUrl} className="button button-accent" target="_blank" rel="noopener noreferrer">Book a Free Call <ArrowUpRight size={17} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>

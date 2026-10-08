@@ -5,7 +5,7 @@ import { appPages, products } from "@/data/portfolio";
 import { callUrl, pageMetadata, siteUrl } from "@/lib/site";
 
 const title = "Custom App Development in Austin, Texas | GODZ-i";
-const description = "We build custom apps for your company and maintain them for life. Not satisfied? 30 more days free. Book a free 30 minute video call.";
+const description = "Custom apps built for your business and kept running. 30 days of free maintenance after delivery. Book a free 30 minute video call.";
 
 export const metadata = pageMetadata({ title, description, path: "/build" });
 
@@ -18,7 +18,7 @@ const pains = [
 const method = [
   { title: "Build", text: "We scope it with you, then build it." },
   { title: "Launch", text: "We put it live and make sure it runs." },
-  { title: "Maintain", text: "We fix what breaks, for life." },
+  { title: "Maintain", text: "30 days free, then ongoing maintenance if you want it." },
 ];
 
 const data = {
@@ -48,7 +48,7 @@ export default function BuildPage() {
       <section id="hero" className="hero page-hero" aria-labelledby="page-heading">
         <div className="container">
           <p className="eyebrow hero-eyebrow">For companies that need an app built</p>
-          <h1 id="page-heading">Your app, built <span>and maintained for life.</span></h1>
+          <h1 id="page-heading">Your custom app, <span>built and kept running.</span></h1>
           <p className="hero-description">Most developers hand over the code and disappear. We stay.</p>
           <div className="hero-actions">
             <CallButton />
@@ -68,7 +68,7 @@ export default function BuildPage() {
         <div className="container">
           <div className="section-heading">
             <p className="eyebrow">Our method</p>
-            <h2 id="method-heading">Built for Life.</h2>
+            <h2 id="method-heading">Built to Run.</h2>
             <p className="section-description">One team builds it, launches it and keeps it running.</p>
           </div>
           <ol className="benefit-grid">
@@ -100,9 +100,9 @@ export default function BuildPage() {
       <section className="section page-cta" aria-labelledby="offer-heading">
         <div className="container page-cta-layout">
           <div>
-            <p className="eyebrow">Our guarantee</p>
-            <h2 id="offer-heading">If it breaks, we fix it. For life.</h2>
-            <p className="section-description">Not satisfied after launch? We work 30 more days free until we hit the result we agreed on.</p>
+            <p className="eyebrow">Custom builds only</p>
+            <h2 id="offer-heading">Our custom app guarantee.</h2>
+            <p className="section-description">30 days of free maintenance after delivery. Not happy with the final delivery? We keep working for 30 days until it&apos;s right. After that, ongoing maintenance is available.</p>
           </div>
           <div>
             <p className="contact-offer">Start with a free 30 minute video call. You leave with a plan, hire us or not.</p>

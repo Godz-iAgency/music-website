@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "GODZ-i. We build your app. Then maintain it for life. Custom app development in Austin, Texas.";
+export const alt = "GODZ-i. Production-ready apps. Use ours, or we build yours. Austin, Texas.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -16,9 +16,9 @@ export default async function SocialImage() {
         <img src={`data:image/png;base64,${logo.toString("base64")}`} width={202} height={61} alt="GODZ-i" />
       </div>
       <div style={{ display: "flex", flexDirection: "column", marginTop: 64, fontSize: 76, fontWeight: 600, lineHeight: 1.08, letterSpacing: "-3px" }}>
-        <span>We build your app.</span><span style={{ color: "#bfc0c7" }}>Then maintain it for life.</span>
+        <span style={{ display: "flex", gap: 0 }}><span>Production-ready</span><span>apps.</span></span><span style={{ color: "#bfc0c7" }}>Use ours, or we build yours.</span>
       </div>
-      <div style={{ display: "flex", fontSize: 25, color: "#bfc0c7", marginTop: 32 }}>Try our live apps. Then book a free call. Austin, Texas.</div>
+      <div style={{ display: "flex", fontSize: 25, color: "#bfc0c7", marginTop: 32 }}>Every app is live. Book a free call for yours. Austin, Texas.</div>
       <div style={{ display: "flex", position: "absolute", bottom: 54, right: 80, color: "#e8430a", fontSize: 20 }}>godz-iagency.com</div>
     </div>,
     size,
