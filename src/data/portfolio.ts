@@ -63,12 +63,92 @@ export const products: readonly Product[] = [
   },
 ];
 
+// Short card copy on the homepage. Each card opens its app page at /apps/[slug].
 export const capabilities = [
-  { name: "AI + Education", headline: "Finish the book. Keep what's in it.", description: "Bookworm AI turns any book into a 7-day course, with flashcards, an AI assistant and your reading level.", theme: "bookworm", background: "/descriptions/bookworm.png" },
-  { name: "Marketplace + Network", headline: "Stop chasing the people your show needs.", description: "Bands, venues, talent buyers, labels and festivals share one platform, with backline and rehearsal studios too.", theme: "splitmic", background: "/descriptions/splitmic.png" },
-  { name: "Health + Personalization", headline: "Stop wondering what's for dinner.", description: "Pick your foods. Get a 7-day meal plan, recipes and a grocery list.", theme: "plants", background: "/descriptions/plants.png" },
-  { name: "Finance + Data", headline: "Stop guessing where it went.", description: "Income, expenses and balances in one view, with personal and business kept separate.", theme: "cashflow", background: "/descriptions/cashflow.png" },
+  { slug: "bookworm-ai", name: "AI + Education", headline: "Readers who forget what they read.", description: "Daily lessons, assignments and flashcards make each book stick.", theme: "bookworm", background: "/descriptions/bookworm.png" },
+  { slug: "splitmic", name: "Marketplace + Network", headline: "Anyone in Austin's music scene.", description: "Search by role, genre or name. Message anyone. Free to join.", theme: "splitmic", background: "/descriptions/splitmic.png" },
+  { slug: "six-plants", name: "Health + Personalization", headline: "Home cooks who want to eat healthier.", description: "Pick the plants you like. It builds the meals for you.", theme: "plants", background: "/descriptions/plants.png" },
+  { slug: "cash-flow-tracker", name: "Finance + Data", headline: "People who track every dollar.", description: "Every bank account, card and transfer in one private view.", theme: "cashflow", background: "/descriptions/cashflow.png" },
 ] as const;
+
+export type AppPage = {
+  slug: string;
+  productId: string;
+  eyebrow: string;
+  title: string;
+  intro: string;
+  cta: string;
+  note?: string;
+  benefits: readonly { title: string; text: string }[];
+  metaTitle: string;
+  metaDescription: string;
+  schemaCategory: string;
+};
+
+// Full copy for each app page. Facts verified against each live app.
+export const appPages: readonly AppPage[] = [
+  {
+    slug: "bookworm-ai", productId: "bookworm",
+    eyebrow: "For readers who want to keep what they read",
+    title: "Finish a book. Keep the ideas.",
+    intro: "You finish the book and the ideas fade. Bookworm AI turns it into a 7-day course so they stay.",
+    cta: "Start Learning",
+    benefits: [
+      { title: "One lesson a day", text: "Each day teaches one idea through a named framework." },
+      { title: "Three assignments", text: "Put the idea to work the same day." },
+      { title: "Flashcards and an AI tutor", text: "Test what you learned. Ask the book anything." },
+    ],
+    metaTitle: "Bookworm AI | Turn Any Book Into a 7-Day Course",
+    metaDescription: "Bookworm AI turns any book into a 7-day course with daily lessons, assignments, flashcards and an AI tutor. Built by GODZ-i.",
+    schemaCategory: "EducationalApplication",
+  },
+  {
+    slug: "splitmic", productId: "splitmic",
+    eyebrow: "For Austin's music industry",
+    title: "Austin's music scene. One platform.",
+    intro: "Stop juggling DMs, group chats and spreadsheets. Bands, venues, talent buyers, labels and festivals find each other on SplitMic.",
+    cta: "Join Free",
+    note: "Free to join. No credit card.",
+    benefits: [
+      { title: "Find anyone", text: "Search Austin by role, genre or name." },
+      { title: "See every opportunity", text: "Gigs and shows posted live in one feed." },
+      { title: "Message directly", text: "One inbox instead of five apps." },
+    ],
+    metaTitle: "SplitMic | Austin Music Industry Network",
+    metaDescription: "SplitMic connects Austin bands, venues, talent buyers, record labels and festivals on one platform. Free to join. Built by GODZ-i.",
+    schemaCategory: "SocialNetworkingApplication",
+  },
+  {
+    slug: "six-plants", productId: "six-plants",
+    eyebrow: "For home cooks who want to eat healthier",
+    title: "Healthy meals, planned for you.",
+    intro: "You want to eat better. Planning is the hard part. Pick the plants you like and Six Plants does the rest.",
+    cta: "Start Planning",
+    benefits: [
+      { title: "Meals from your picks", text: "Choose the plants you like. It creates the meals and recipes." },
+      { title: "A 7-day plan", text: "Review the week before you cook it." },
+      { title: "A ready grocery list", text: "Shop once with everything you need." },
+    ],
+    metaTitle: "Six Plants | 7-Day Healthy Meal Plans and Grocery Lists",
+    metaDescription: "Pick the plants you like. Six Plants builds your meals, recipes, 7-day meal plan and grocery list. Built by GODZ-i.",
+    schemaCategory: "HealthApplication",
+  },
+  {
+    slug: "cash-flow-tracker", productId: "cash-flow-tracker",
+    eyebrow: "For people who track every dollar",
+    title: "Know where every dollar goes.",
+    intro: "Money moves across accounts and cards faster than you can follow it. Cash Flow Tracker puts it all in one private view.",
+    cta: "Start Tracking",
+    benefits: [
+      { title: "Every account in one place", text: "Bank accounts and credit cards side by side." },
+      { title: "Every move logged", text: "Income, expenses and transfers between accounts." },
+      { title: "Habits you can see", text: "Spot where the money goes before it is gone." },
+    ],
+    metaTitle: "Cash Flow Tracker | Track Every Dollar Across Your Accounts",
+    metaDescription: "Track income, expenses and transfers across every bank account and credit card in one private view. Built by GODZ-i.",
+    schemaCategory: "FinanceApplication",
+  },
+];
 
 export const technologies = [
   { name: "Codex", category: "AI Development", logo: "/technology/openai.svg" },

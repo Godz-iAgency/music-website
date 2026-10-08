@@ -61,6 +61,18 @@ Owner-approved hybrid positioning: a portfolio of live apps, a place to open the
 - Social preview (owner-approved follow-up, 2026-10-08): src/app/opengraph-image.tsx now renders "Use our apps. Or have us build yours." with "Turn a book into a 7-day course. Plan a week of meals. Track every dollar." on the site background (#050507) with the same soft orange glow as the hero. Logo and domain line unchanged.
 - The discovery call is a video call (owner-confirmed 2026-10-08); calendar CTAs say "video call".
 
+## Sabri Suby conversion pass and SEO structure (2026-10-08)
+
+Owner-approved. This supersedes the earlier hero and section copy above, and the "no new routes" rule below: the owner asked for app pages, clickable cards and full SEO. CLAUDE.md holds the current rules.
+
+- Positioning: cold social traffic from companies is the primary reader. The offer is "We build your app. Then maintain it for life." The live apps are the proof.
+- Homepage: hero eyebrow "App development · Austin, Texas"; headline "We build your app. Then maintain it for life."; open loop "Skip the pitch. Try the apps we built, then book a free video call and leave with a plan for yours."; buttons "Book a Free Call" (primary, cal.com) and "Try the Apps" (#work).
+- Apps: "Judge us by what we ship." / "Every app is live. Open one and see for yourself."
+- App Description: "Who each app is for." Cards call out each audience in a few words and link to /apps/[slug] ("See how it works").
+- Contact: free call offer, three steps (Pick a time, Share your idea, Get your plan), the 30-day guarantee, a "Pick a Time" link, a link to /build, and the email. Message Us is unchanged.
+- New pages: /build (pain, Built for Life method, proof, guarantee, offer, steps, P.S.) and four app pages with audience-specific copy verified against each live app on 2026-10-08.
+- SEO: sitemap.xml, robots.txt, per-page canonical and social metadata, JSON-LD (Organization, WebSite, ItemList, SoftwareApplication, Service, BreadcrumbList), breadcrumbs, and footer links to every page.
+
 ## Preservation rules
 
 - Text-only edits. Keep the layout, component structure, order, containers, grids, spacing, dimensions, breakpoints, colors, fonts, motion, icons and interactions exactly as approved. Fit copy into the existing design; shorten copy if needed rather than adjusting CSS.

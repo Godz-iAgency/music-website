@@ -4,17 +4,19 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
-export function Navigation({ showTeam = false }: { showTeam?: boolean }) {
+export function Navigation({ showTeam = false, home = true }: { showTeam?: boolean; home?: boolean }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
   const header = useRef<HTMLElement>(null);
+  // Off the homepage, section links point back to the homepage sections.
+  const base = home ? "" : "/";
   const links = [
     { label: "Apps", href: "#work" },
     { label: "App Description", href: "#capabilities" },
     { label: "Tech Stack", href: "#technology" },
     ...(showTeam ? [{ label: "Team", href: "#team" }] : []),
     { label: "Contact Us", href: "#contact" },
-  ];
+  ].map((link) => ({ ...link, href: base + link.href }));
 
   useEffect(() => {
     if (!mobileOpen) return;
@@ -35,7 +37,7 @@ export function Navigation({ showTeam = false }: { showTeam?: boolean }) {
   function followAnchor(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
     setMobileOpen(false);
     // The menu is an overlay, so closing it never shifts the target section.
-    const target = document.querySelector<HTMLElement>(href);
+    const target = href.startsWith("#") ? document.querySelector<HTMLElement>(href) : null;
     if (target) {
       event.preventDefault();
       target.tabIndex = -1;
@@ -48,11 +50,11 @@ export function Navigation({ showTeam = false }: { showTeam?: boolean }) {
   return (
     <header ref={header} className="site-header">
       <div className="container nav-layout">
-        <a href="#hero" className="brand-link" aria-label="GODZ-i home" onClick={() => setMobileOpen(false)}>
+        <a href={home ? "#hero" : "/"} className="brand-link" aria-label="GODZ-i home" onClick={() => setMobileOpen(false)}>
           <Image src="/godzi_logo_horizontal.png" alt="GODZ-i" width={1024} height={307} className="nav-logo" preload />
         </a>
         <nav aria-label="Main navigation" className="desktop-nav">
-          {links.map((link) => <a key={link.href} href={link.href} className={link.href === "#contact" ? "nav-contact" : undefined}>{link.label}{link.href === "#contact" && <ArrowUpRight size={14} aria-hidden="true" />}</a>)}
+          {links.map((link) => <a key={link.href} href={link.href} className={link.href.endsWith("#contact") ? "nav-contact" : undefined}>{link.label}{link.href.endsWith("#contact") && <ArrowUpRight size={14} aria-hidden="true" />}</a>)}
         </nav>
         <button ref={menuButton} type="button" className="menu-button" aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
           aria-expanded={mobileOpen} aria-controls="mobile-navigation" onClick={() => setMobileOpen(!mobileOpen)}>

@@ -1,9 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useRef, useState } from "react";
 import { ArrowUpRight, Mail, MessageCircleMore, X } from "lucide-react";
-
-const recipient = "Christopher@godz-iagency.com";
+import { callUrl, contactEmail as recipient } from "@/lib/site";
 
 export function Contact() {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -17,9 +17,13 @@ export function Contact() {
       <div className="container contact-layout">
         <div>
           <p className="eyebrow">Contact Us</p>
-          <h2 id="contact-heading">Need an app built?<br />Want to partner?</h2>
+          <h2 id="contact-heading">Get a free plan<br />for your app.</h2>
+          <p className="contact-offer">A 30 minute video call. No cost, no obligation. You leave with a plan, hire us or not.</p>
+          <ol className="contact-steps"><li>Pick a time</li><li>Share your idea</li><li>Get your plan</li></ol>
+          <p className="contact-guarantee">Not satisfied after launch? We work 30 more days free until we hit the result we agreed on.</p>
+          <a className="contact-call" href={callUrl} target="_blank" rel="noopener noreferrer">Pick a Time <ArrowUpRight size={17} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
+          <Link className="contact-address" href="/build">How we build and maintain your app</Link>
           <a className="contact-address" href={`mailto:${recipient}`}>{recipient}</a>
-          <a className="contact-call" href="https://cal.com/christopher-downer-6pkxir/strategy-session" target="_blank" rel="noopener noreferrer">Book a Video Discovery Call <ArrowUpRight size={17} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
         </div>
         <button type="button" className="message-button" onClick={() => dialogRef.current?.showModal()} aria-haspopup="dialog" aria-label="Message Us">
           <MessageCircleMore size={28} strokeWidth={1.6} aria-hidden="true" />

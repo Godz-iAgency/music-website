@@ -8,9 +8,11 @@ The GODZ-i website. Next.js 16 / React 19 / Tailwind app deployed on Vercel via 
 
 GODZ-i (pronounced "God's Eye") builds useful apps for work and everyday life. The site is a hybrid:
 
-1. Portfolio: shows the apps GODZ-i built.
-2. Storefront: visitors discover and open each app through its existing product link. There is no on-site checkout.
-3. Client funnel: visitors who want GODZ-i to build an app, or to partner, book a video discovery call or message us.
+1. Client funnel (primary, cold social traffic): companies that need an app built. Offer: we build it and maintain it for life. CTA: free 30 minute video call.
+2. Portfolio as proof: the live apps are the credential. "Try the apps, judge for yourself."
+3. Storefront: each app has its own page and links out to the live app. There is no on-site checkout.
+
+Copy follows a condensed Sabri Suby structure (audience callout, big promise, open loop, pain, mechanism, proof, guarantee, free call offer, steps, P.S.), kept short: short card copy up front, full copy one click away.
 
 This replaces the earlier music-industry agency positioning (venues, talent buyers, bands, labels, festivals, n8n automation). That direction is retired. Do not restore it, and do not add pages for it.
 
@@ -29,12 +31,19 @@ Locked card copy. Keep verbatim. Links live in `src/data/portfolio.ts`.
 | Six Plants | Healthy Eating Made Simple | Get a 7-day meal plan with recipe and grocery list |
 | Cash Flow Tracker | Every dollar counts. | See income, expenses and account balances in one place. |
 
-To add an app, add one entry to `products` and one to `capabilities` in `src/data/portfolio.ts`, plus its assets. Add one outcome line to the hero paragraph. Section titles must not mention how many apps exist.
+To add an app, add one entry each to `products`, `capabilities` and `appPages` in `src/data/portfolio.ts`, plus its assets. Its page, sitemap entry, footer link and structured data are generated from that data. Section titles must not mention how many apps exist.
+
+App audiences (each app page targets one):
+- Bookworm AI: readers who want to keep what they read. 7-day course, one lesson a day through a named framework, three assignments and three flashcards a day, AI chat assistant.
+- SplitMic: Austin's music industry specifically. Free to join, no credit card. Search by role, genre or name, live opportunity feed, direct messaging.
+- Six Plants: home cooks who want to eat healthier. Pick the plants you like; it creates meals, recipes, a 7-day plan and a grocery list.
+- Cash Flow Tracker: people who track every dollar. Every bank account and credit card in one private view; income, expenses and transfers between accounts. Owner-confirmed; do not claim automatic bank sync.
 
 ## CALLS TO ACTION
 
 - Discovery call (a video call, 30 minutes): https://cal.com/christopher-downer-6pkxir/strategy-session
-- Current labels: hero "Video Call", Contact "Book a Video Discovery Call".
+- Current labels: "Book a Free Call" (hero and pages), "Pick a Time" (Contact). The call is free with no obligation; the visitor leaves with a plan either way.
+- Guarantee (owner-confirmed): we maintain every app we build for life and fix what breaks. Not satisfied after launch: we work 30 more days free until we hit the agreed result. Do not add other guarantees, scarcity or pricing.
 - Message Us opens a Gmail or email-app draft. The visitor presses Send in their composer. No backend email service.
 - Product cards say "View Live App". Do not say "Buy", "Get", or imply a purchase flow until one exists.
 
@@ -45,7 +54,7 @@ To add an app, add one entry to `products` and one to `capabilities` in `src/dat
 - Layout, fonts, imagery, wallpapers, logos, animation and interactions are approved. Copy changes are text-only unless the user asks for a design change.
 - Design tweaks beyond that: only when confidence is above 95%. Otherwise leave it alone.
 - Preserve `src/components/hero-animation.tsx`, the hero video, the mobile-compatible MP4 source, poster and playback recovery (commit 89ea25a). Do not edit `public/` assets.
-- Nav labels are locked: Apps, App Description, Tech Stack, Contact Us. Anchors: #work, #capabilities, #technology, #contact.
+- Nav labels are locked: Apps, App Description, Tech Stack, Contact Us. Anchors: #work, #capabilities, #technology, #contact. Off the homepage they point to `/#...` (`Navigation home={false}`).
 
 ## COPY RULES
 
@@ -56,7 +65,8 @@ To add an app, add one entry to `products` and one to `capabilities` in `src/dat
 - Banned vague phrasing: "move forward with clarity", "connect better", "make room for what matters", "make everyday progress easier".
 - Use we, our, us for the company. Never I, me, my.
 - Do not invent pricing, trials, guarantees, testimonials, metrics, purchase flows or unsupported features. Do not call apps "AI" unless verified. Only Bookworm AI is confirmed as AI.
-- Cash Flow Tracker: no promises of returns, bank integrations or automation. Six Plants: no medical claims.
+- Cash Flow Tracker: no promises of returns or automatic bank sync. Six Plants: no medical claims.
+- Never double up: a line on the homepage card should not repeat the product card or the app page lead.
 
 ## WHERE COPY LIVES
 
@@ -65,8 +75,18 @@ To add an app, add one entry to `products` and one to `capabilities` in `src/dat
 - App Description: `src/components/capabilities.tsx` (title) and `src/data/portfolio.ts` (`capabilities` cards)
 - Tech Stack: `src/components/technology.tsx` and `src/data/portfolio.ts` (`technologies`)
 - Contact and message window: `src/components/contact.tsx`
-- Metadata: `src/app/layout.tsx`, `src/app/manifest.json`
+- App pages: `src/app/apps/[slug]/page.tsx` (template) and `appPages` in `src/data/portfolio.ts` (copy, meta title and description)
+- Build page (cold traffic landing page): `src/app/build/page.tsx`
+- Metadata: `src/app/layout.tsx`, `src/app/manifest.json`, `pageMetadata()` in `src/lib/site.ts`
 - Social preview image: `src/app/opengraph-image.tsx`. Keep it in sync with the hero.
+
+## SEO
+
+- Routes: `/`, `/build`, `/apps/bookworm-ai`, `/apps/splitmic`, `/apps/six-plants`, `/apps/cash-flow-tracker`. All static.
+- `src/app/sitemap.ts` and `src/app/robots.ts` generate `/sitemap.xml` and `/robots.txt` from the data.
+- Every page uses `pageMetadata()` for its own title, description, canonical, Open Graph and Twitter fields. Nested metadata replaces the layout's, so never rely on inheritance.
+- Structured data (JSON-LD via `jsonLd()`): Organization (layout), WebSite and ItemList (home), SoftwareApplication and BreadcrumbList (app pages), Service and BreadcrumbList (build).
+- Internal links: App Description cards open app pages; app pages link to the other apps and /build; the footer links every page. Use descriptive link text.
 
 Not live: the older components (`problem`, `two-path`, `founder-story`, `services`, `testimonials`, `proof`, `about` and similar) are not imported by the page and carry stale agency copy. Leave them unless asked. Full-project lint has pre-existing findings there. Lint only changed files.
 
