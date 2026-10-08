@@ -51,7 +51,7 @@ The owner has just approved the four card headings below. They are locked brand 
 
 Owner-approved hybrid positioning: a portfolio of live apps, a place to open them, and an invitation to have GODZ-i build or partner. Copy avoids app counts so new apps can be added without rewriting section titles.
 
-- Hero: "Use our apps. Or have us build yours." Paragraph lists outcomes (7-day course, week of meals, track every dollar, find the people your next show needs) and ends with the build offer. Buttons: "See the Apps" (#work) and "Book a Video Call" (opens https://cal.com/christopher-downer-6pkxir/strategy-session in a new tab; owner-requested).
+- Hero: "Use our apps. Or have us build yours." Paragraph lists outcomes (7-day course, week of meals, track every dollar, find the people your next show needs) and ends with the build offer. Buttons: "See the Apps" (#work) and "Video Call" (opens https://cal.com/christopher-downer-6pkxir/strategy-session in a new tab; owner-requested).
 - Apps: "Every app here is live." / "Pick the problem you have. Open the app that solves it." Product cards and "View Live App" unchanged.
 - App Description title: "The problem each app solves." Cards are problem-first: "Finish the book. Keep what's in it." / "Stop chasing the people your show needs." / "Stop wondering what's for dinner." / "Stop guessing where it went." with short factual descriptions.
 - Tech Stack title: "What powers every app."
