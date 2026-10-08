@@ -2,23 +2,23 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "GODZ-i. We build AI apps for work and life. Learn book ideas, find bands and venues, plan healthy meals, and see your income and spending in one place.";
+export const alt = "GODZ-i. Use our apps. Or have us build yours. Turn a book into a 7-day course, plan a week of meals, track every dollar, and find the people your next show needs.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function SocialImage() {
   const logo = await readFile(join(process.cwd(), "public/godzi_logo_horizontal.png"));
   return new ImageResponse(
-    <div style={{ display: "flex", flexDirection: "column", width: "100%", height: "100%", background: "#101110", color: "#f7f7f2", padding: "64px 80px" }}>
+    <div style={{ display: "flex", flexDirection: "column", width: "100%", height: "100%", background: "#050507", backgroundImage: "radial-gradient(circle at 85% 40%, rgba(232, 67, 10, 0.2), transparent 55%)", color: "#f7f7f2", padding: "64px 80px" }}>
       <div style={{ display: "flex", background: "#fff", borderRadius: 4, width: 226, padding: "8px 12px" }}>
         {/* ImageResponse uses its own renderer, so next/image is not applicable. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={`data:image/png;base64,${logo.toString("base64")}`} width={202} height={61} alt="GODZ-i" />
       </div>
       <div style={{ display: "flex", flexDirection: "column", marginTop: 64, fontSize: 76, fontWeight: 600, lineHeight: 1.08, letterSpacing: "-3px" }}>
-        <span>We build AI apps</span><span style={{ color: "#bfc0c7" }}>for work and life.</span>
+        <span>Use our apps.</span><span style={{ color: "#bfc0c7" }}>Or have us build yours.</span>
       </div>
-      <div style={{ display: "flex", fontSize: 25, color: "#bfc0c7", marginTop: 32 }}>Learn book ideas. Find bands and venues. Plan healthy meals. Track income and spending.</div>
+      <div style={{ display: "flex", fontSize: 25, color: "#bfc0c7", marginTop: 32 }}>Turn a book into a 7-day course. Plan a week of meals. Track every dollar.</div>
       <div style={{ display: "flex", position: "absolute", bottom: 54, right: 80, color: "#e8430a", fontSize: 20 }}>godz-iagency.com</div>
     </div>,
     size,

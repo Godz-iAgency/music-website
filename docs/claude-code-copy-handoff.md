@@ -58,7 +58,7 @@ Owner-approved hybrid positioning: a portfolio of live apps, a place to open the
 - Contact: "Need an app built? Want to partner?" plus an owner-requested "Book a Discovery Call" link (new `.contact-call` style) under the email. Dialog heading: "What do you want to build?"
 - Metadata and manifest: "GODZ-i | Use Our Apps or Have Us Build Yours" with an outcome-list description. "AI" was dropped from site-wide claims because only Bookworm AI is verified as AI.
 - Owner-approved premium polish in globals.css (appended block, no layout change): soft orange glow behind the hero, orange section eyebrows, accent glow on the primary button hover, hover lift and accent border on product and App Description cards (hover-capable devices only, disabled under reduced motion).
-- Not changed: src/app/opengraph-image.tsx still renders the previous "We build AI apps for work and life." headline because this handoff excludes the image generator. Update it in a separate approved pass so social previews match.
+- Social preview (owner-approved follow-up, 2026-10-08): src/app/opengraph-image.tsx now renders "Use our apps. Or have us build yours." with "Turn a book into a 7-day course. Plan a week of meals. Track every dollar." on the site background (#050507) with the same soft orange glow as the hero. Logo and domain line unchanged.
 - The calendar CTA says "call", not "in person". Confirm the meeting format before claiming it.
 
 ## Preservation rules
