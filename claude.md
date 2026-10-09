@@ -68,7 +68,9 @@ App audiences (each app page targets one):
 - Layout, fonts, imagery, wallpapers, logos, animation and interactions are approved. Copy changes are text-only unless the user asks for a design change.
 - Design tweaks beyond that: only when confidence is above 95%. Otherwise leave it alone.
 - Preserve `src/components/hero-animation.tsx`, the hero video, the mobile-compatible MP4 source, poster and playback recovery (commit 89ea25a). Do not edit `public/` assets.
-- The hero video plays on every device, including phones with "Remove animations" / reduced motion on (owner decision, 2026-10-08). The 2026-10-07 redesign had added a reduced-motion pause, which stopped it on the owner's Samsung. Never add that pause back, and never add a play button.
+- The hero video plays on every device, including phones with "Remove animations" / reduced motion on (owner decision, 2026-10-08). The 2026-10-07 redesign had added a reduced-motion pause, which stopped it on the owner's Samsung Galaxy A16. The owner confirmed it plays on that phone after the fix (commit f16ddf9). Never add that pause back, never read `prefers-reduced-motion` in `hero-animation.tsx`, and never add a play button or any visible playback control.
+- After any change to `hero-animation.tsx`, run `node scripts/check-hero-playback.mjs`. It asserts playback while reduced motion is requested, retry on tap, source fallback (mobile MP4, then WebM, then original MP4) and listener cleanup. Do not weaken its checks to make it pass.
+- Video debugging facts (verified): the first source `public/godzi-intro-mobile.mp4` is baseline H.264 level 3.0, no audio, index at the front, served with range requests (HTTP 206). If a phone shows only the poster, open `/godzi-intro-mobile.mp4` directly on that phone to separate a decoding problem from a page-code problem.
 - Nav labels are locked: Apps, App Description, Tech Stack, Contact Us. Anchors: #work, #capabilities, #technology, #contact. Off the homepage they point to `/#...` (`Navigation home={false}`).
 
 ## COPY RULES
