@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { jsonLd, organization, pageMetadata, siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -29,6 +30,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(organization)} />
         {children}
+        {/* Vercel Web Analytics: visitors, pages and referrers. Enable it in the Vercel project's Analytics tab. */}
+        <Analytics />
       </body>
     </html>
   );

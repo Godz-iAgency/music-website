@@ -111,6 +111,13 @@ Not live: the older components (`problem`, `two-path`, `founder-story`, `service
 - Internal links: App Description cards open app pages; app pages link to the other apps and /build; the footer links every page. Use descriptive link text.
 - Owner step: submit `https://www.godz-iagency.com/sitemap.xml` in Google Search Console. Social apps cache link previews, so a changed image needs a re-scrape (LinkedIn Post Inspector, Facebook Sharing Debugger).
 
+## ANALYTICS
+
+- Vercel Web Analytics via `@vercel/analytics` (added 2026-10-08, owner-approved dependency). `<Analytics />` sits in `src/app/layout.tsx`.
+- The owner must enable it once in Vercel: project > Analytics > Enable. Until then `/_vercel/insights/script.js` returns 404 and nothing is recorded.
+- Vercel plan is Hobby (free): visitors, page views, top pages and referrers only. Custom events (`track()` for button clicks) need Pro, so do not add them unless the owner upgrades.
+- Call bookings are counted in the owner's Cal.com dashboard, not on the site.
+
 ## MODEL RULE
 
 - Sonnet: research and planning only. Present the plan and wait for approval. Doc-only edits like this file are fine.
@@ -121,5 +128,5 @@ Not live: the older components (`problem`, `two-path`, `founder-story`, `service
 
 - NEVER commit `.env.local` or other `.env*` files.
 - Leave untracked supplied archives alone: `Christoper Zip 2/` and `Christopher Zip Folder.zip`. Do not search them for marketing context.
-- No dependency, package file, deployment, domain or remote changes unless asked.
+- No dependency, package file, deployment, domain or remote changes unless asked. Current approved additions: `@vercel/analytics`.
 - Keep every existing href, email address and anchor unless the user asks to change one.
