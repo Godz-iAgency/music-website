@@ -37,6 +37,7 @@ export const products: readonly Product[] = [
     url: "https://www.splitmic.com/",
     logo: { src: "/products/splitmic.png", width: 1024, height: 1024 },
     nameLogo: { src: "/products/splitmic-mark.png", width: 1024, height: 1024 },
+    background: "/products/splitmic-wallpaper.png",
     theme: "splitmic",
   },
   {
