@@ -32,7 +32,8 @@ async function check() {
     pause() { this.paused = true; },
     load() { this.loads++; this.currentSrc = this.src; this.paused = true; },
   });
-  const preference = Object.assign(eventTarget(), {matches: false});
+  // The phone asks for reduced motion; the brand loop must still play.
+  const preference = Object.assign(eventTarget(), {matches: true});
   const document = Object.assign(eventTarget(), {hidden: false});
   const window = Object.assign(eventTarget(), {matchMedia: () => preference});
   let cleanup;
@@ -72,15 +73,7 @@ async function check() {
   await flushPlayback();
   assert.ok(!video.paused, "Resume on return to the page");
 
-  preference.matches = true;
-  preference.emit("change");
-  assert.ok(video.paused, "Respect reduced motion");
-  document.emit("pointerdown");
-  assert.ok(video.paused, "An unrelated tap must not override reduced motion");
-  preference.matches = false;
-  preference.emit("change");
-  await flushPlayback();
-  assert.ok(!video.paused, "Resume when the motion preference permits playback");
+  assert.ok(!video.paused, "Play even when the phone requests reduced motion");
 
   video.emit("error");
   await flushPlayback();
@@ -93,7 +86,7 @@ async function check() {
 
   cleanup();
   assert.equal(video.listenerCount() + preference.listenerCount() + document.listenerCount() + window.listenerCount(), 0);
-  console.log("Hero playback recovery, preferences, source fallback, and cleanup passed.");
+  console.log("Hero playback recovery, reduced-motion playback, source fallback, and cleanup passed.");
 }
 
 check().catch(error => { console.error(error); process.exitCode = 1; });

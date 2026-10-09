@@ -22,3 +22,9 @@ Browser-policy references: https://developer.chrome.com/blog/autoplay/ and https
 Production build and TypeScript passed. The derived file decoded fully without errors, has fast-start metadata, and the preview served byte-range requests with HTTP 206. The poster loads successfully. Run node scripts/check-hero-playback.mjs to check rejected-autoplay recovery, no duplicate restart, hidden-page behaviour, page return, reduced-motion changes, bounded source fallback and event-listener cleanup.
 
 The browser preview played the derived MP4 with 640×640 decoded dimensions, readyState 4, muted/inline/loop enabled and no video error. Playback crossed the loop boundary from 9.947 seconds to 0.025 seconds. Phone, landscape phone, tablet and desktop checks showed no horizontal overflow; the animation remained playing through the responsive review. No browser console errors appeared. The final published-site check is performed after deployment; this report does not claim direct access to the owner's physical phone.
+
+## Update 2026-10-08: reduced-motion pause removed
+
+The owner's Samsung Galaxy A16 still showed a still frame. The video file played when opened directly on the phone, and the phone's "Remove animations" setting was on. That setting makes Android browsers report prefers-reduced-motion: reduce, and the redesign on 2026-10-07 (commit 34c3e75) had added code that paused the video in that case and ignored taps. The site before the redesign played the video unconditionally, which is why it used to work.
+
+At the owner's request, hero-animation.tsx no longer reads the reduced-motion preference; the loop plays on every device. Muting, retries, source fallback and listener cleanup are unchanged. scripts/check-hero-playback.mjs now asserts playback while the phone requests reduced motion.

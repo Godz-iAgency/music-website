@@ -8,14 +8,10 @@ export function HeroAnimation() {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     let playAttempt: Promise<void> | null = null;
     let active = true;
+    // The brand loop plays on every device, as it did before 2026-10-07, including phones set to remove animations.
     const startPlayback = () => {
-      if (preference.matches) {
-        video.pause();
-        return;
-      }
       if (document.hidden || !video.paused || playAttempt) return;
       // Set both properties before play(), including browsers that hydrate muted late.
       video.defaultMuted = true;
@@ -37,7 +33,6 @@ export function HeroAnimation() {
     video.addEventListener("loadeddata", startPlayback);
     video.addEventListener("canplay", startPlayback);
     video.addEventListener("error", recoverSource);
-    preference.addEventListener("change", startPlayback);
     document.addEventListener("visibilitychange", startPlayback);
     window.addEventListener("pageshow", startPlayback);
     document.addEventListener("pointerdown", startPlayback, { passive: true });
@@ -47,7 +42,6 @@ export function HeroAnimation() {
       video.removeEventListener("loadeddata", startPlayback);
       video.removeEventListener("canplay", startPlayback);
       video.removeEventListener("error", recoverSource);
-      preference.removeEventListener("change", startPlayback);
       document.removeEventListener("visibilitychange", startPlayback);
       window.removeEventListener("pageshow", startPlayback);
       document.removeEventListener("pointerdown", startPlayback);
