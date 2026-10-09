@@ -48,6 +48,7 @@ export const products: readonly Product[] = [
     url: "https://www.gbombs.app/",
     logo: { src: "/products/six-plants-logo.png", width: 1024, height: 1024 },
     artwork: { src: "/products/six-plants-food-art.png", width: 2065, height: 761, alt: "Six Plants lettering made from colorful plant foods." },
+    background: "/products/six-plants-wallpaper.png",
     theme: "plants",
   },
   {
