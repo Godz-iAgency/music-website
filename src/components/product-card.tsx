@@ -10,15 +10,7 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
         {product.background && <Image src={product.background} alt="" fill sizes="(max-width: 640px) 90vw, (max-width: 1100px) 45vw, 580px" className="product-background" />}
         <div className="product-caption"><span>{product.category}</span><span aria-hidden="true">0{index + 1}</span></div>
         <div className="product-brand">
-          {product.wordmark && product.logo ? (
-            <div className="product-wordmark-lockup">
-              <div className="product-wordmark">
-                <Image src={product.logo.src} alt="" width={product.logo.width} height={product.logo.height} sizes="56px" className="product-wordmark-logo" />
-                <span>{product.wordmark}</span>
-              </div>
-              <p className="product-wordmark-tagline">{product.headline}</p>
-            </div>
-          ) : product.artwork ? (
+          {product.artwork ? (
             <Image src={product.artwork.src} alt={product.artwork.alt} width={product.artwork.width} height={product.artwork.height}
               sizes="(max-width: 640px) 85vw, (max-width: 1100px) 40vw, 540px" className="product-artwork" />
           ) : product.logo ? (
