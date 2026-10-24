@@ -9,6 +9,7 @@ export type Product = {
   url: string | null;
   logo: { src: string; width: number; height: number } | null;
   nameLogo?: { src: string; width: number; height: number };
+  wordmark?: string;
   artwork?: { src: string; width: number; height: number; alt: string };
   background?: string;
   theme: "bookworm" | "splitmic" | "plants" | "cashflow";
@@ -60,8 +61,8 @@ export const products: readonly Product[] = [
     features: ["Income tracking", "Expense tracking", "Account balances", "Account allocation", "Transfers", "Personal vs. business classification", "Cash-flow visibility"],
     url: "https://cash-flow-tracker-godz-i.vercel.app/",
     logo: { src: "/products/cash-flow-original.png", width: 1254, height: 1254 },
-    artwork: { src: "/products/money-track-artwork.png", width: 896, height: 1756, alt: "MoneyTrack. Every dollar counts. Financial charts, a dollar bill and gold bars over clear teal water." },
-    background: "/products/cash-flow-water.webp",
+    wordmark: "MoneyTrack",
+    background: "/products/money-track-hd-background.png",
     theme: "cashflow",
   },
 ];
