@@ -47,10 +47,27 @@ export function Navigation({ showTeam = false, home = true }: { showTeam?: boole
     }
   }
 
+  function returnToTop(event: React.MouseEvent<HTMLAnchorElement>) {
+    setMobileOpen(false);
+    if (!home || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+    event.preventDefault();
+    const hero = document.getElementById("hero");
+    if (hero) {
+      hero.tabIndex = -1;
+      hero.focus({ preventScroll: true });
+    }
+    // Scroll explicitly even when the URL already ends in #hero.
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    if (window.location.hash !== "#hero") history.pushState(history.state, "", "#hero");
+    // Cancel any remaining frame from an earlier smooth section scroll.
+    requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: "instant" }));
+  }
+
   return (
     <header ref={header} className="site-header">
       <div className="container nav-layout">
-        <a href={home ? "#hero" : "/"} className="brand-link" aria-label="GODZ-i home" onClick={() => setMobileOpen(false)}>
+        <a href={home ? "#hero" : "/"} className="brand-link" aria-label="GODZ-i home" onClick={returnToTop}>
           <Image src="/godzi_logo_horizontal.png" alt="GODZ-i" width={1024} height={307} className="nav-logo" preload />
         </a>
         <nav aria-label="Main navigation" className="desktop-nav">
