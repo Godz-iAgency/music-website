@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   ...pageMetadata({
     title: "GODZ-i | AI-Powered Apps and Custom App Development",
-    description: "AI-powered apps you can use today: Bookworm AI, SplitMic, Six Plants, Cash Flow Tracker. Need one built? We build custom AI apps.",
+    description: "AI-powered apps you can use today: Bookworm AI, SplitMic, Six Plants, Money Track. Need one built? We build custom AI apps.",
     path: "/",
   }),
   robots: { index: true, follow: true },

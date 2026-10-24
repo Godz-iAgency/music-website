@@ -1,5 +1,7 @@
 # GODZ-i — Claude Code copy-only handoff
 
+Owner update, 2026-10-24: the homepage headline is now exactly 18 words: "We develop apps and subscription products for health, money, education and music, including AI reading. More in development." Cash Flow Tracker has been renamed Money Track on public text and metadata. Its card now displays the owner's MoneyTrack portrait artwork at public/products/money-track-artwork.png, with the pictured Login button removed. The original green/gold mark, water background, slogan and description remain. Existing internal routes and the app link stay unchanged at the owner's request; the app link redirects to MoneyTrack. Preserve this update alongside the later Claude Code changes already present in the repository.
+
 Fresh handoff, 2026-10-07. Read this as the owner's current brief, alongside AGENTS.md and any newer direct instructions. The owner approves the current visual design and product cards. The next task is to improve the advertising copy throughout the existing page, not to redesign or rebuild it.
 
 ## Purpose and audience
@@ -25,7 +27,7 @@ The owner has just approved the four card headings below. They are locked brand 
 | Bookworm AI | Making every book smarter. | Turn any book into a 7-day course. | https://bookworm-ai.app/ |
 | SplitMic | Music Industry Connected. | Connecting bands, venues, talent buyers, record labels and festivals on the same platform. | https://www.splitmic.com/ |
 | Six Plants | Healthy Eating Made Simple | Get a 7-day meal plan with recipe and grocery list | https://www.gbombs.app/ |
-| Cash Flow Tracker | Every dollar counts. | See income, expenses and account balances in one place. | https://cash-flow-tracker-godz-i.vercel.app/ |
+| Money Track | Every dollar counts. | See income, expenses and account balances in one place. | https://cash-flow-tracker-godz-i.vercel.app/ |
 
 - **Bookworm AI:** turns books into structured seven-day learning experiences. Supplied product context includes AI-generated courses, multiple reading levels, an AI book assistant, flashcards, multilingual learning and book clubs. Its existing poster says "Making every book smarter." Keep the product text consistent with that artwork.
 - **SplitMic:** one music-industry platform connecting bands, venues, talent buyers, record labels and festivals. Supplied broader context also includes backline companies, instrument rental, rehearsal studios and live-show discovery. Keep the owner's five principal audience groups in the card description. Do not reduce it to only bands and venues or replace the slogan with a new music-connection headline.
